@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Things Bee</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #E9DFCF;
+      color: #31443D;
+      line-height: 1.7;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 70px;
+      background: rgba(233, 223, 207, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(95, 115, 108, 0.08);
+    }
+
+    .logo {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.3rem;
+      color: #B89B5E;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #31443D;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #5F736C;
+    }
+
+    header {
+      padding-top: 120px;
+      background:
+      linear-gradient(rgba(49, 68, 61, 0.72), rgba(49, 68, 61, 0.72)),
+      url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600&auto=format&fit=crop') center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      color: #F8F3EA;
+    }
+
+    .hero-subtitle {
+      margin-top: 40px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      color: #DCC9A3;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5.4rem;
+      max-width: 950px;
+      line-height: 1.05;
+      letter-spacing: 1px;
+      margin-bottom: 28px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 1.15rem;
+      margin-bottom: 45px;
+      color: #F4EEE4;
+    }
+
+    .hero-button {
+      background-color: #5F736C;
+      color: #F8F3EA;
+      padding: 16px 38px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .hero-button:hover {
+      background-color: #4D615B;
+      transform: translateY(-3px);
+    }
+
+    section {
+      padding: 110px 12%;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.3rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #31443D;
+    }
+
+    .section-text {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #556861;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+      margin-top: 65px;
+    }
+
+    .card {
+      background-color: #F8F3EA;
+      border-radius: 28px;
+      padding: 45px 35px;
+      box-shadow: 0 12px 35px rgba(49, 68, 61, 0.08);
+      transition: 0.3s ease;
+      border: 1px solid rgba(95, 115, 108, 0.08);
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem;
+      margin-bottom: 16px;
+      color: #31443D;
+    }
+
+    .card p {
+      color: #5C6E67;
+    }
+
+    .about-section {
+      background-color: #2F4A43;
+    }
+
+    .about-content {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
+      margin-bottom: 25px;
+      color: #F8F3EA;
+    }
+
+    .about-content p {
+      margin-bottom: 22px;
+      font-size: 1.1rem;
+      color: #E9DFCF;
+    }
+
+    .email-box {
+      margin-top: 45px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .email-box input {
+      padding: 17px 22px;
+      width: 340px;
+      border-radius: 50px;
+      border: 1px solid #CDBBA2;
+      background-color: #F8F3EA;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .email-box button {
+      padding: 17px 34px;
+      border-radius: 50px;
+      border: none;
+      background-color: #31443D;
+      color: #F8F3EA;
+      cursor: pointer;
+      transition: 0.3s ease;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .email-box button:hover {
+      background-color: #24332D;
+    }
+
+    footer {
+      background-color: #31443D;
+      color: #F8F3EA;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    footer h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.3rem;
+      color: #B89B5E;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      letter-spacing: 1px;
+      color: #E9DFCF;
+    }
+
+    @media(max-width: 768px) {
+      nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero-title {
+        font-size: 3.3rem;
+      }
+
+      .hero-text {
+        font-size: 1rem;
+      }
+
+      section {
+        padding: 85px 8%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">All Things Bee</div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+    <div class="hero-subtitle">Thoughtfully Designed With Heart</div>
+
+    <h1 class="hero-title">
+      Meaningful Words Designed To Encourage, Celebrate & Stay With You.
+    </h1>
+
+    <p class="hero-text">
+      All Things Bee is a greeting card brand rooted in encouragement,
+      meaningful connection, and moments worth holding onto.
+    </p>
+
+    <a href="#collections" class="hero-button">Explore The Brand</a>
+  </header>
+
+  <section id="collections">
+    <h2 class="section-title">The Collections</h2>
+
+    <p class="section-text">
+      Thoughtfully designed greeting cards created to celebrate growth,
+      offer encouragement, and honor life’s meaningful moments.
+    </p>
+
+    <div class="collections">
+      <div class="card">
+        <h3>Encouragement</h3>
+        <p>
+          Gentle reminders and meaningful words for the seasons when people need them most.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Celebration</h3>
+        <p>
+          Elevated cards designed to honor milestones, accomplishments, and new beginnings.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Graduation</h3>
+        <p>
+          Keepsake-worthy graduation cards celebrating becoming, growth, and possibility.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>The Evergreen Collection</h3>
+        <p>
+          Thoughtfully designed seasonal cards created to celebrate traditions, meaningful holidays, and moments shared year after year.
+        </p>
+      </div>
+
+      <div style="display:none">
+      <div class="card">
+        <h3>Encouragement</h3>
+        <p>
+          Gentle reminders and meaningful words for the seasons when people need them most.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Celebration</h3>
+        <p>
+          Elevated cards designed to honor milestones, accomplishments, and new beginnings.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Graduation</h3>
+        <p>
+          Keepsake-worthy graduation cards celebrating becoming, growth, and possibility.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-content">
+      <h2>Hi, I’m Bee.</h2>
+
+      <p>
+        All Things Bee began from a simple idea: words have the power to stay with people.
+      </p>
+
+      <p>
+        I wanted to create greeting cards that felt intentional — cards that encourage,
+        celebrate, comfort, and remind people they are seen.
+      </p>
+
+      <p>
+        Every design is created with warmth, elegance, and meaningful connection at the center.
+        My hope is that each card feels personal enough to keep long after the moment has passed.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Something Beautiful Is On The Way</h2>
+
+    <p class="section-text">
+      Join the mailing list for launch updates, collection announcements,
+      and behind-the-scenes moments from All Things Bee.
+    </p>
+
+    <div class="email-box">
+      <input type="email" placeholder="Enter your email" />
+      <button>Join The List</button>
+    </div>
+  </section>
+
+  <footer>
+    <h3>All Things Bee</h3>
+    <p>Encouragement • Inspiration • Meaningful Connection</p>
+  </footer>
+
+</body>
+</html>
