@@ -178,20 +178,34 @@ header {
     }
 
     .about-section {
-  background:
+
+  background-image:
     linear-gradient(
       rgba(47, 74, 67, 0.84),
       rgba(47, 74, 67, 0.84)
     ),
-    url('Images/IMG_2579.jpg')
-    center/cover no-repeat;
+    url('Images/IMG_2579.jpg');
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   color: #F8F3EA;
+
 }
- @media (min-width: 769px) {
+    @media (max-width: 768px) {
+
+  .about-section {
+    background-position: center 15%;
+    background-size: cover;
+  }
+
+}
+    @media (min-width: 769px) {
 
   .about-section {
     background-attachment: fixed;
+    background-size: 110%;
   }
 
 }
