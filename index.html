@@ -52,6 +52,37 @@ header {
       color: #B89B5E;
       letter-spacing: 1px;
     }
+    .logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo-main {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #31443D;
+  letter-spacing: 0.5px;
+}
+
+.bee-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: #B89B5E;
+  margin-left: 6px;
+  position: relative;
+  top: -6px;
+}
+
+.logo-sub {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 4px;
+  color: #31443D;
+  margin-top: 6px;
+}
 
     .nav-links {
       display: flex;
@@ -233,6 +264,22 @@ header {
   }
 
 }
+    @media (max-width: 768px) {
+
+  .logo-main {
+    font-size: 1.5rem;
+  }
+
+  .bee-script {
+    font-size: 1.8rem;
+  }
+
+  .logo-sub {
+    font-size: 0.58rem;
+    letter-spacing: 3px;
+  }
+
+}
 
     .about-content {
       max-width: 900px;
@@ -376,7 +423,17 @@ header {
 <body>
 
   <nav>
-    <div class="logo">All Things Bee</div>
+    <a href="index.html" class="logo" aria-label="All Things Bee Home">
+
+  <div class="logo-main">
+    All Things <span class="bee-script">Bee</span>
+  </div>
+
+  <div class="logo-sub">
+    GREETING CARDS
+  </div>
+
+</a>
 
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
