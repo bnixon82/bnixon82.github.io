@@ -332,38 +332,104 @@ header {
   display: block;
   margin-top: 8px;
 }
-    .email-box {
-      margin-top: 45px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
+    .contact-section {
+  background: #F6F1E7;
+  padding: 140px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
 
-    .email-box input {
-      padding: 17px 22px;
-      width: 340px;
-      border-radius: 50px;
-      border: 1px solid #CDBBA2;
-      background-color: #F8F3EA;
-      font-family: 'Raleway', sans-serif;
-    }
+.contact-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    .email-box button {
-      padding: 17px 34px;
-      border-radius: 50px;
-      border: none;
-      background-color: #31443D;
-      color: #F8F3EA;
-      cursor: pointer;
-      transition: 0.3s ease;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
+.contact-bee {
+  width: 90px;
+  margin-bottom: 30px;
+}
 
-    .email-box button:hover {
-      background-color: #24332D;
-    }
+.contact-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5.8rem;
+  font-weight: 500;
+  color: #31443D;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.contact-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 5rem;
+  font-weight: 400;
+  color: #B89B5E;
+  margin-top: -10px;
+  margin-bottom: 35px;
+}
+
+.contact-divider {
+  width: 260px;
+  height: 1px;
+  background: #C8A96B;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.contact-divider::after {
+  content: "✦";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #F6F1E7;
+  color: #C8A96B;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+
+.section-text {
+  max-width: 620px;
+  margin: 0 auto 40px auto;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #5F736C;
+}
+
+.email-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.email-box input {
+  padding: 16px 18px;
+  width: 320px;
+  border: 1px solid #D8C7A0;
+  background: #FCFAF6;
+  font-size: 1rem;
+  font-family: 'Raleway', sans-serif;
+  outline: none;
+}
+
+.email-box button {
+  padding: 16px 30px;
+  border: 1px solid #B89B5E;
+  background: transparent;
+  color: #31443D;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.email-box button:hover {
+  background: #B89B5E;
+  color: #F8F3EA;
+}
 
     footer {
       background-color: #31443D;
@@ -422,6 +488,42 @@ header {
   .about-content h2 {
     font-size: 3.8rem;
   }
+      @media (max-width: 768px) {
+
+  .contact-section {
+    padding: 100px 24px;
+  }
+
+  .contact-heading {
+    font-size: 3.4rem;
+  }
+
+  .contact-script {
+    font-size: 3.2rem;
+    margin-top: 8px;
+  }
+
+  .contact-bee {
+    width: 65px;
+  }
+
+  .contact-divider {
+    width: 180px;
+  }
+
+  .email-box {
+    flex-direction: column;
+  }
+
+  .email-box input {
+    width: 100%;
+  }
+
+  .email-box button {
+    width: 100%;
+  }
+
+}
 
 }
   </style>
@@ -530,30 +632,23 @@ header {
 
 
      
-  <section class="about-section" id="about">
-    <div class="about-content">
-      <h2 class="about-heading">
-  <span class="about-name">Hi, I'm Bisceglia</span>
-</h2>
+  <section id="contact" class="contact-section">
 
-      <p>
-        All Things Bee began from a simple idea: words have the power to stay with people.
-      </p>
+  <div class="contact-content">
 
-      <p>
-        I wanted to create greeting cards that felt intentional — cards that encourage,
-        celebrate, comfort, and remind people they are seen.
-      </p>
+    <img src="Images/bee-logo.png"
+         alt="All Things Bee"
+         class="contact-bee">
 
-      <p>
-        Every design is created with warmth, elegance, and meaningful connection at the center.
-        My hope is that each card feels personal enough to keep long after the moment has passed.
-      </p>
-    </div>
-  </section>
+    <h2 class="contact-heading">
+      Something Beautiful
+    </h2>
 
-  <section id="contact">
-    <h2 class="section-title">Something Beautiful Is On The Way</h2>
+    <h3 class="contact-script">
+      Is On The Way
+    </h3>
+
+    <div class="contact-divider"></div>
 
     <p class="section-text">
       Join the mailing list for launch updates, collection announcements,
@@ -565,18 +660,24 @@ header {
       method="POST"
       target="_blank">
 
-  <input
-    type="email"
-    name="entry.52549828"
-    placeholder="Enter your email"
-    required
-  />
+      <input
+        type="email"
+        name="entry.52549828"
+        placeholder="Enter your email"
+        required
+      />
 
-  <button type="submit">
-    Join The List
-  </button>
+      <button type="submit">
+        Join The List
+      </button>
 
-</form>
+    </form>
+
+  </div>
+
+</section>
+
+
 <div style="height: 24px;"></div>
  
     <footer>
