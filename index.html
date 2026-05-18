@@ -56,12 +56,13 @@ header {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  align-items: center;
   line-height: 1;
 }
 
 .logo-main {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
+  font-size: 4.2rem;
   font-weight: 500;
   color: #31443D;
   letter-spacing: 0.5px;
@@ -69,19 +70,19 @@ header {
 
 .bee-script {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
+  font-size: 4.8rem;
   color: #B89B5E;
-  margin-left: 6px;
-  position: relative;
-  top: -6px;
+  margin-top: -22px;
+  margin-left: 130px;
+  line-height: 1;
 }
 
 .logo-sub {
   font-family: 'Raleway', sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 4px;
+  font-size: 1rem;
+  letter-spacing: 7px;
   color: #31443D;
-  margin-top: 6px;
+  margin-top: -8px;
 }
 
     .nav-links {
@@ -266,17 +267,21 @@ header {
 }
     @media (max-width: 768px) {
 
+ @media (max-width: 768px) {
+
   .logo-main {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 
   .bee-script {
-    font-size: 1.8rem;
+    font-size: 3rem;
+    margin-top: -14px;
+    margin-left: 70px;
   }
 
   .logo-sub {
-    font-size: 0.58rem;
-    letter-spacing: 3px;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
   }
 
 }
@@ -423,10 +428,14 @@ header {
 <body>
 
   <nav>
-    <a href="index.html" class="logo" aria-label="All Things Bee Home">
+   <a href="index.html" class="logo" aria-label="All Things Bee Home">
 
   <div class="logo-main">
-    All Things <span class="bee-script">Bee</span>
+    All Things
+  </div>
+
+  <div class="bee-script">
+    Bee
   </div>
 
   <div class="logo-sub">
