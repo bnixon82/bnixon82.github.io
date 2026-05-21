@@ -222,8 +222,14 @@ header {
     }
 
     .card:hover {
-      transform: translateY(-6px);
-    }
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(49, 68, 61, 0.12);
+  border-color: rgba(184, 155, 94, 0.22);
+}
+
+.card:hover .card-accent {
+  width: 75px;
+}
 
     .card h3 {
       font-family: 'Cormorant Garamond', serif;
@@ -466,7 +472,13 @@ header {
   color: #F8F3EA;
   transform: translateY(-2px);
 }
-
+.card-accent {
+  width: 48px;
+  height: 2px;
+  background: #C8A96B;
+  margin-bottom: 24px;
+  transition: 0.35s ease;
+}
     @media(max-width: 768px) {
       nav {
         padding: 20px;
@@ -584,6 +596,7 @@ header {
 
     <div class="collections">
       <div class="card">
+        <div class="card-accent"></div>
         <h3>Encouragement</h3>
         <p>
           Gentle reminders and meaningful words for the seasons when people need them most.
@@ -591,6 +604,7 @@ header {
       </div>
 
       <div class="card">
+        <div class="card-accent"></div>
         <h3>Celebration</h3>
         <p>
           Elevated cards designed to honor milestones, accomplishments, and new beginnings.
@@ -598,6 +612,7 @@ header {
       </div>
 
       <div class="card">
+        <div class="card-accent"></div>
         <h3>Everyday Moments</h3>
         <p>
           Keepsake-worthy cards created for intentional moments, thoughtful gestures, and everyday connections worth holding onto.
@@ -605,6 +620,7 @@ header {
       </div>
 
       <div class="card">
+        <div class="card-accent"></div>
         <h3>Evergreen Collection</h3>
         <p>
           Thoughtfully designed seasonal cards created to celebrate traditions, meaningful holidays, and moments shared year after year.
