@@ -417,6 +417,14 @@ header {
   padding: 0 10px;
   font-size: 1rem;
 }
+    .success-message {
+  margin-top: 24px;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #7A8C84;
+  opacity: 0;
+  transition: opacity 0.10s ease;
+}
 
 .section-text {
   max-width: 620px;
@@ -698,11 +706,11 @@ header {
       and behind-the-scenes moments from All Things Bee.
     </p>
 
-    <form class="email-box"
-      action="https://docs.google.com/forms/d/e/1FAIpQLSe37ci3eKWidQo-fH-7B1wqCGttCDf6jk_2EU68XllL9B5ikA/formResponse"
-      method="POST"
-      target="_blank"
-      onsubmit="setTimeout(() => this.reset(), 100);">
+<form class="email-box"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSe37ci3eKWidQo-fH-7B1wqCGttCDf6jk_2EU68XllL9B5ikA/formResponse"
+  method="POST"
+  target="_blank"
+  onsubmit="showSuccessMessage(); setTimeout(() => this.reset(), 100);">
 
       <input
         type="email"
@@ -716,6 +724,9 @@ header {
       </button>
 
     </form>
+      <p class="success-message">
+  Thanks for joining the hive. 🐝 
+</p>
 
   </div>
 
@@ -742,6 +753,20 @@ header {
   </div>
 
 </footer>
+<script>
 
+function showSuccessMessage() {
+
+  const message = document.querySelector('.success-message');
+
+  message.style.opacity = '1';
+
+  setTimeout(() => {
+    message.style.opacity = '0';
+  }, 4000);
+
+}
+
+</script>
 </body>
 </html>
