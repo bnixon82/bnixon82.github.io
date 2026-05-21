@@ -295,7 +295,28 @@ header {
   }
 
 }
+  @media (max-width: 768px) {
 
+  .card {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(49, 68, 61, 0.10);
+  }
+
+  .card-accent {
+    width: 70px;
+  }
+
+}
+
+.card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.card:active {
+  transform: scale(0.98);
+}
     .about-content {
       max-width: 900px;
       margin: auto;
