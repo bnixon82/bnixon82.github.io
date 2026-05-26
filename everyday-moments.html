@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Everyday Moments | All Things Bee</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      background-color: #F6F1E7;
+      color: #31443D;
+      line-height: 1.7;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 70px;
+      background: rgba(246, 241, 231, 0.86);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(95, 115, 108, 0.08);
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .logo-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.6rem;
+      font-weight: 500;
+      color: #31443D;
+    }
+
+    .bee-script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      color: #B89B5E;
+      margin-top: -18px;
+    }
+
+    .logo-sub {
+      font-size: 0.8rem;
+      letter-spacing: 6px;
+      color: #31443D;
+      margin-top: -5px;
+    }
+
+    .back-home {
+      text-decoration: none;
+      color: #31443D;
+      letter-spacing: 1px;
+      font-size: 0.95rem;
+      transition: 0.3s ease;
+    }
+
+    .back-home:hover {
+      color: #B89B5E;
+    }
+
+    /* HERO */
+
+    .hero-section {
+      min-height: 100vh;
+
+      background:
+        linear-gradient(rgba(49, 68, 61, 0.70), rgba(49, 68, 61, 0.70)),
+        url('https://images.unsplash.com/photo-1511988617509-a57c8a288659?q=80&w=1600&auto=format&fit=crop') center/cover;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      padding: 220px 20px 120px;
+
+      color: #F8F3EA;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-subtitle {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: #DCC9A3;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5.1rem;
+      line-height: 1.05;
+      margin-bottom: 28px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #F4EEE4;
+    }
+
+    /* INTRO */
+
+    .intro-section {
+      padding: 120px 12%;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      margin-bottom: 24px;
+      color: #31443D;
+    }
+
+    .section-text {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #5F736C;
+    }
+
+    /* MOMENT CARDS */
+
+    .moments-section {
+      padding: 40px 12% 120px;
+    }
+
+    .moments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 35px;
+    }
+
+    .moment-card {
+      background: #FCFAF6;
+      border-radius: 28px;
+      padding: 50px 35px;
+      text-align: center;
+      box-shadow: 0 14px 35px rgba(49, 68, 61, 0.08);
+      border: 1px solid rgba(95, 115, 108, 0.08);
+
+      transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .moment-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 45px rgba(49, 68, 61, 0.12);
+    }
+
+    .card-accent {
+      width: 55px;
+      height: 2px;
+      background: #C8A96B;
+      margin: 0 auto 26px;
+    }
+
+    .moment-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      margin-bottom: 18px;
+      color: #31443D;
+    }
+
+    .moment-card p {
+      color: #5C6E67;
+      font-size: 1rem;
+    }
+
+    /* FEATURE SECTION */
+
+    .feature-section {
+      background: #EFE5D7;
+      padding: 120px 12%;
+      text-align: center;
+    }
+
+    .feature-script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #B89B5E;
+      margin-bottom: 10px;
+    }
+
+    .feature-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.4rem;
+      color: #31443D;
+      margin-bottom: 22px;
+    }
+
+    .feature-text {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #5F736C;
+      font-size: 1.05rem;
+    }
+
+    .hero-button {
+      display: inline-block;
+      margin-top: 40px;
+
+      background-color: #5F736C;
+      color: #F8F3EA;
+
+      padding: 16px 38px;
+
+      border-radius: 50px;
+      text-decoration: none;
+
+      font-weight: 600;
+      letter-spacing: 1px;
+
+      transition: 0.3s ease;
+    }
+
+    .hero-button:hover {
+      background-color: #4D615B;
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      background-color: #31443D;
+      color: #F8F3EA;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    footer h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.4rem;
+      color: #DCC9A3;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      letter-spacing: 1px;
+      color: #E9DFCF;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      nav {
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .logo-main {
+        font-size: 2.5rem;
+      }
+
+      .bee-script {
+        font-size: 3rem;
+      }
+
+      .logo-sub {
+        font-size: 0.6rem;
+        letter-spacing: 4px;
+      }
+
+      .hero-title {
+        font-size: 3.3rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 2.8rem;
+      }
+
+      .feature-title {
+        font-size: 2.8rem;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <a href="index.html" class="logo">
+
+      <div class="logo-main">
+        All Things
+      </div>
+
+      <div class="bee-script">
+        Bee
+      </div>
+
+      <div class="logo-sub">
+        GREETING CARDS
+      </div>
+
+    </a>
+
+    <a href="index.html" class="back-home">
+      ← Back To Home
+    </a>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <div class="hero-subtitle">
+        Everyday Moments Collection
+      </div>
+
+      <h1 class="hero-title">
+        Thoughtful Cards For The Moments That Matter Most
+      </h1>
+
+      <p class="hero-text">
+        A collection designed for intentional connection, everyday encouragement,
+        and meaningful gestures people hold onto long after the moment passes.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- INTRO -->
+
+  <section class="intro-section">
+
+    <h2 class="section-title">
+      Beautiful Words For Everyday Connection
+    </h2>
+
+    <p class="section-text">
+      Not every meaningful moment needs a major occasion.
+      The Everyday Moments Collection was created to celebrate friendship,
+      gratitude, support, love, and the quiet moments that deserve recognition too.
+    </p>
+
+  </section>
+
+  <!-- MOMENTS GRID -->
+
+  <section class="moments-section">
+
+    <div class="moments-grid">
+
+      <div class="moment-card">
+
+        <div class="card-accent"></div>
+
+        <h3>
+          Thinking Of You
+        </h3>
+
+        <p>
+          Gentle reminders that someone is loved, seen, remembered, and cared for.
+        </p>
+
+      </div>
+
+      <div class="moment-card">
+
+        <div class="card-accent"></div>
+
+        <h3>
+          Meaningful Connection
+        </h3>
+
+        <p>
+          Elegant cards created to deepen relationships and celebrate thoughtful connection.
+        </p>
+
+      </div>
+
+      <div class="moment-card">
+
+        <div class="card-accent"></div>
+
+        <h3>
+          Just Because
+        </h3>
+
+        <p>
+          Beautiful everyday sentiments designed for life’s small but meaningful moments.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURE -->
+
+  <section class="feature-section">
+
+    <div class="feature-script">
+      Thoughtfully Designed With Heart
+    </div>
+
+    <h2 class="feature-title">
+      Everyday Moments Become Keepsakes
+    </h2>
+
+    <p class="feature-text">
+      The Everyday Moments Collection is currently being thoughtfully created —
+      blending warmth, elegance, and meaningful storytelling into every design.
+    </p>
+
+    <a href="index.html#contact" class="hero-button">
+      Join The Launch List
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <h3>
+      All Things Bee
+    </h3>
+
+    <p>
+      Encouragement • Inspiration • Meaningful Connection
+    </p>
+
+  </footer>
+
+</body>
+</html>
