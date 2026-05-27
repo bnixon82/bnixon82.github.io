@@ -205,30 +205,32 @@ header {
       color: #556861;
     }
 
-    .collections {
+ .collections {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 35px;
+  gap: 32px;
   margin-top: 65px;
   align-items: stretch;
 }
 
-    .card {
+  .card {
   background-color: #F8F3EA;
   border-radius: 28px;
-  padding: 45px 35px;
-
-  box-shadow: 0 12px 35px rgba(49, 68, 61, 0.08);
-
-  border: 1px solid rgba(95, 115, 108, 0.08);
-
-  transition: 0.3s ease;
+  padding: 55px 34px;
+  min-height: 360px;
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 
-  min-height: 420px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 12px 35px rgba(49, 68, 61, 0.08);
+  border: 1px solid rgba(95, 115, 108, 0.08);
+  transition: 0.3s ease;
 }
 
     .card:hover {
@@ -242,16 +244,19 @@ header {
 }
 
     .card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.1rem;
-      margin-bottom: 16px;
-      color: #31443D;
-      min-height: 120px;
-    }
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.1rem;
+  margin-bottom: 26px;
+  color: #31443D;
+  min-height: auto;
+}
 
-    .card p {
-      color: #5C6E67;
-    }
+.card p {
+  color: #5C6E67;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 230px;
+}
 
    .about-section {
 
@@ -307,6 +312,7 @@ header {
 
   .card {
     min-height: auto;
+    padding: 45px 30px;
   }
 
   .card h3 {
