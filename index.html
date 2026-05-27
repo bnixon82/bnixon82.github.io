@@ -205,23 +205,23 @@ header {
       color: #556861;
     }
 
- .collections {
+.collections {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 28px;
   margin-top: 65px;
   align-items: stretch;
 }
 
-  .card {
+.card {
   background-color: #F8F3EA;
   border-radius: 28px;
-  padding: 55px 34px;
-  min-height: 360px;
+  padding: 42px 30px;
+  min-height: 330px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   text-align: center;
@@ -232,7 +232,6 @@ header {
   border: 1px solid rgba(95, 115, 108, 0.08);
   transition: 0.3s ease;
 }
-
     .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 18px 45px rgba(49, 68, 61, 0.12);
@@ -243,19 +242,25 @@ header {
   width: 75px;
 }
 
-    .card h3 {
+  .card h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 2.1rem;
-  margin-bottom: 26px;
+  font-size: 2rem;
+  line-height: 1.15;
+  margin-bottom: 28px;
   color: #31443D;
-  min-height: auto;
+  min-height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card p {
   color: #5C6E67;
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 230px;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  max-width: 235px;
+  margin: 0 auto;
 }
 
    .about-section {
