@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Bee | All Things Bee</title>
+
+  <meta
+    name="description"
+    content="Meet Bee, founder and creative heart behind All Things Bee — a greeting card brand rooted in encouragement, creativity, connection and meaningful words."
+  >
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Images/favicon.png">
+
+  <style>
+    :root {
+      --cream: #E9DFCF;
+      --cream-light: #F8F4ED;
+      --cream-soft: #F3EDE4;
+      --emerald: #31443D;
+      --sage: #5F736C;
+      --gold: #A97C2B;
+      --gold-soft: #B78A34;
+      --charcoal: #2B2B2B;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--charcoal);
+      background: var(--cream-light);
+      line-height: 1.7;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 244, 237, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(49, 68, 61, 0.10);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--emerald);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald);
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--emerald);
+      padding: 95px 30px 90px;
+      color: var(--white);
+    }
+
+    .hero-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .hero-photo {
+      position: relative;
+    }
+
+    .hero-photo img {
+      height: 620px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-photo::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      right: 16px;
+      bottom: 16px;
+      border: 1px solid rgba(233,223,207,0.35);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #E6C98E;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.4rem, 7vw, 5.7rem);
+      line-height: 0.98;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-family: 'Great Vibes', cursive;
+      font-weight: 400;
+      color: #F0D8A7;
+      margin-top: 8px;
+    }
+
+    .hero p {
+      color: rgba(255,255,255,0.84);
+      line-height: 1.9;
+      margin-bottom: 18px;
+      max-width: 620px;
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      color: #E1BF7D;
+      font-size: 2.7rem;
+      margin-top: 24px;
+    }
+
+    /* STORY */
+
+    .story {
+      padding: 105px 30px;
+      background: var(--cream-light);
+    }
+
+    .story-inner {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .script-heading {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-size: 2.3rem;
+      margin-bottom: 3px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 500;
+      margin-bottom: 34px;
+      text-align: center;
+    }
+
+    .story p {
+      color: #5B655E;
+      margin-bottom: 21px;
+      font-size: 1rem;
+      line-height: 1.95;
+    }
+
+    .story-lead {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald) !important;
+      font-size: 1.55rem !important;
+      line-height: 1.65 !important;
+    }
+
+    /* CAREER + CREATIVITY */
+
+    .career {
+      background: var(--cream);
+      padding: 105px 30px;
+    }
+
+    .career-grid {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .career-copy h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2.7rem, 5vw, 4rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .career-copy p {
+      color: #5D665F;
+      margin-bottom: 18px;
+      line-height: 1.9;
+    }
+
+    .career-quote {
+      border-left: 2px solid var(--gold);
+      padding-left: 22px;
+      margin-top: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.45rem;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .career-card {
+      background: var(--emerald);
+      color: var(--white);
+      padding: 55px 45px;
+    }
+
+    .career-card .small-title {
+      color: #DFBE80;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .career-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      font-weight: 500;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .career-card p {
+      color: rgba(255,255,255,0.80);
+      line-height: 1.9;
+      margin-bottom: 18px;
+    }
+
+    /* WHY */
+
+    .why {
+      background: var(--emerald);
+      color: var(--white);
+      padding: 105px 30px;
+    }
+
+    .why-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .why .script-heading {
+      color: #E3C284;
+    }
+
+    .why h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 26px;
+    }
+
+    .why p {
+      color: rgba(255,255,255,0.82);
+      line-height: 1.95;
+      margin-bottom: 19px;
+    }
+
+    .why-callout {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      line-height: 1.35;
+      margin: 42px auto 0;
+      max-width: 760px;
+    }
+
+    /* LIFE OUTSIDE THE BRAND */
+
+    .life {
+      padding: 105px 30px;
+      background: var(--white);
+    }
+
+    .life-head {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .life-head p {
+      color: #667069;
+    }
+
+    .life-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .life-card {
+      background: var(--cream-soft);
+      padding: 34px 26px;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+
+    .life-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .life-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .life-card p {
+      color: #626B64;
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+
+    /* REPRESENTATION */
+
+    .representation {
+      padding: 105px 30px;
+      background: var(--cream);
+    }
+
+    .representation-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .representation p {
+      font-family: 'Cormorant Garamond', serif;
+      color: #4F5952;
+      font-size: 1.35rem;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    /* FINAL */
+
+    .final-note {
+      padding: 105px 30px;
+      background: var(--cream-light);
+      text-align: center;
+    }
+
+    .final-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .bee-mark {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .final-note h2 {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 400;
+      margin-bottom: 18px;
+    }
+
+    .final-note p {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1.35;
+      margin-bottom: 28px;
+    }
+
+    .text-link {
+      color: var(--emerald);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #25332E;
+      color: rgba(255,255,255,0.78);
+      padding: 70px 30px 28px;
+    }
+
+    .footer-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.13);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand .tagline {
+      color: #D8B979;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 17px;
+    }
+
+    .footer-brand p {
+      max-width: 380px;
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+
+    .footer-column h4 {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.82rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: #D8B979;
+    }
+
+    .copyright {
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.52);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--cream-light);
+        border-top: 1px solid rgba(49,68,61,0.10);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 30px;
+        gap: 22px;
+      }
+
+      .hero-grid,
+      .career-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero-photo img {
+        height: auto;
+        max-height: 650px;
+      }
+
+      .life-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-wrap {
+        padding: 12px 20px;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+      }
+
+      .hero,
+      .story,
+      .career,
+      .why,
+      .life,
+      .representation,
+      .final-note {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .hero {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+
+      .hero-photo::before {
+        top: -10px;
+        left: -10px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .life-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="nav-wrap">
+
+      <a href="index.html" class="brand">
+        <img src="Images/bee-logo.png" alt="All Things Bee logo">
+        <span class="brand-name">All Things Bee</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="about.html">About Bee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/allthings_bee/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="hero-grid">
+
+        <div class="hero-photo">
+
+          <img
+            src="/IMG_2579.jpg"
+            alt="Bee, founder of All Things Bee"
+          >
+
+        </div>
+
+
+        <div class="hero-copy">
+
+          <div class="eyebrow">
+            The Heart Behind the Brand
+          </div>
+
+          <h1>
+            Hi, I’m Bee.
+            <span>So glad you're here.</span>
+          </h1>
+
+          <p>
+            I’m the founder and creative heart behind All Things Bee —
+            a greeting card brand rooted in encouragement, connection,
+            creativity and the belief that the right words can stay
+            with someone long after the moment has passed.
+          </p>
+
+          <p>
+            This brand is deeply personal to me, because it brings together
+            so many of the things I love most: people, meaningful words,
+            beautiful details and creating something that makes someone
+            feel seen.
+          </p>
+
+          <div class="signature">
+            With love, Bee
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- STORY -->
+
+    <section class="story">
+
+      <div class="story-inner">
+
+        <div class="script-heading">
+          How it began
+        </div>
+
+        <h2 class="section-title">
+          The words were always there.
+        </h2>
+
+        <p class="story-lead">
+          I have always been the encouraging friend, the one who sends
+          the message, checks in, celebrates the win and tries to find the
+          words when someone else cannot.
+        </p>
+
+        <p>
+          I am usually the friend reminding someone that a hard season will
+          not last forever, telling them to keep going or celebrating their
+          accomplishment as if it were my own.
+        </p>
+
+        <p>
+          Over time, I began to realize just how much those words mattered.
+          Sometimes one thoughtful message can change the way someone walks
+          into the rest of their day.
+        </p>
+
+        <p>
+          That realization became the heart of All Things Bee.
+        </p>
+
+        <p>
+          I wanted to create cards that feel more personal than something
+          quickly picked from a shelf; cards that feel warm, thoughtful
+          and intentional. Cards that encourage us, celebrate us and remind
+          us that we are seen.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CAREER + CREATIVITY -->
+
+    <section class="career">
+
+      <div class="career-grid">
+
+        <div class="career-copy">
+
+          <div class="script-heading" style="text-align:left;">
+            Another side of Bee
+          </div>
+
+          <h2>
+            Technology by profession. Creativity by nature.
+          </h2>
+
+          <p>
+            Before All Things Bee became part of my story, I spent more than
+            22 years working in Enterprise Information Technology, supporting
+            some of the world’s largest Fintech companies.
+          </p>
+
+          <p>
+            My career has taught me a great deal about leadership,
+            communication, resilience, problem-solving and the importance
+            of showing up for people.
+          </p>
+
+          <p>
+            But All Things Bee has given me something very different: 
+            a creative outlet.
+          </p>
+
+          <p>
+            After years of working in highly structured, technical
+            environments, this brand allows me to lean into another side of
+            myself: writing, designing, imagining, choosing colors, shaping
+            ideas and creating thoughtful details from beginning to end.
+          </p>
+
+          <div class="career-quote">
+            All Things Bee is where my love of words, people, creativity
+            and beautiful details finally found a home.
+          </div>
+
+        </div>
+
+
+        <div class="career-card">
+
+          <div class="small-title">
+            Two worlds, one story
+          </div>
+
+          <h3>
+            Structure and creativity can live in the same place.
+          </h3>
+
+          <p>
+            My technology career taught me how to think critically,
+            communicate clearly and build with intention.
+          </p>
+
+          <p>
+            All Things Bee gives me the freedom to take those same qualities
+            and use them in a completely different way; to build something
+            warm, creative and deeply personal.
+          </p>
+
+          <p>
+            In many ways, this brand is where both sides of me finally meet.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHY -->
+
+    <section class="why">
+
+      <div class="why-inner">
+
+        <div class="script-heading">
+          My why
+        </div>
+
+        <h2>
+          Because people deserve to feel seen.
+        </h2>
+
+        <p>
+          I believe encouragement matters. Celebration matters.
+          Checking in matters. Saying “I’m proud of you,” “I’m thinking
+          of you,” or “keep going” matters.
+        </p>
+
+        <p>
+          Life moves quickly, and it is easy to assume the people we love
+          already know how we feel. All Things Bee is my way of helping us
+          slow down long enough to actually say it.
+        </p>
+
+        <p>
+          I also wanted to create a brand where the people receiving the cards
+          could see themselves reflected in the beauty, joy, strength and
+          everyday moments being celebrated.
+        </p>
+
+        <div class="why-callout">
+          My hope is that opening an All Things Bee card feels a little
+          like receiving a hug.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LIFE OUTSIDE THE BRAND -->
+
+    <section class="life">
+
+      <div class="life-head">
+
+        <div class="script-heading">
+          Beyond All Things Bee
+        </div>
+
+        <h2 class="section-title">
+          The things that keep my heart full.
+        </h2>
+
+        <p>
+          The brand is a big part of my creative world, but the people
+          and experiences I love are what inspire so much of it.
+        </p>
+
+      </div>
+
+
+      <div class="life-grid">
+
+        <div class="life-card">
+
+          <div class="life-icon">♡</div>
+
+          <h3>Wife</h3>
+
+          <p>
+            Love, partnership and building a life together are at the
+            center of who I am.
+          </p>
+
+        </div>
+
+
+        <div class="life-card">
+
+          <div class="life-icon">✦</div>
+
+          <h3>Mom</h3>
+
+          <p>
+            Family is one of my greatest joys and continues to shape the
+            way I think about love, encouragement and celebration.
+          </p>
+
+        </div>
+
+
+        <div class="life-card">
+
+          <div class="life-icon">🐾</div>
+
+          <h3>Dog Mom</h3>
+
+          <p>
+            Life is always a little sweeter with Rose nearby.
+          </p>
+
+        </div>
+
+
+        <div class="life-card">
+
+          <div class="life-icon">✈</div>
+
+          <h3>Traveler</h3>
+
+          <p>
+            I love experiencing new places, cultures, food, architecture and history: 
+            especially when I can share those memories with family.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- REPRESENTATION -->
+
+    <section class="representation">
+
+      <div class="representation-inner">
+
+        <div class="script-heading">
+          Made with intention
+        </div>
+
+        <h2 class="section-title">
+          Beautiful words should feel like they were made with you in mind.
+        </h2>
+
+        <p>
+          Representation has always been an important part of the vision
+          for All Things Bee.
+        </p>
+
+        <p>
+          I want the brand to reflect the beauty, strength, joy, love,
+          resilience and everyday experiences of the communities we serve, 
+          with imagery and messages that feel intentional, warm and genuine.
+        </p>
+
+        <p>
+          Because everyone deserves to walk into a card aisle, physical
+          or virtual, and find something that feels like it belongs to them.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL NOTE -->
+
+    <section class="final-note">
+
+      <div class="final-inner">
+
+        <div class="bee-mark">🐝</div>
+
+        <h2>
+          From me to you
+        </h2>
+
+        <p>
+          To create something beautiful that helps us say the things
+          people sometimes need to hear most.
+        </p>
+
+        <a href="index.html#collections" class="text-link">
+          Explore the Collections →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>
+            All Things Bee
+          </h3>
+
+          <div class="tagline">
+            Simple. Elegant. Strong.
+          </div>
+
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            for encouragement, inspiration, celebration and the moments
+            in between.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">Home</a>
+          <a href="encouragement.html">Encouragement</a>
+          <a href="celebration.html">Celebration & Wins</a>
+          <a href="everyday-moments.html">Everyday Moments</a>
+          <a href="evergreen.html">Evergreen</a>
+          <a href="about.html">About Bee</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Connect
+          </h4>
+
+          <a href="contact.html">Contact Us</a>
+
+          <a
+            href="https://www.instagram.com/allthings_bee/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <div>
+          © 2026 All Things Bee. All rights reserved.
+        </div>
+
+        <div>
+          Encouragement • Inspiration • Celebration
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+
+  <script>
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+
+      mainNav.classList.toggle('open');
+
+      if (mainNav.classList.contains('open')) {
+        menuToggle.textContent = '✕';
+      } else {
+        menuToggle.textContent = '☰';
+      }
+
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+
+      link.addEventListener('click', function () {
+
+        mainNav.classList.remove('open');
+        menuToggle.textContent = '☰';
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
