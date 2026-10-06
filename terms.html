@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Terms & Conditions | All Things Bee</title>
+
+  <meta
+    name="description"
+    content="Review the terms and conditions for using the All Things Bee website."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root {
+      --cream: #E9DFCF;
+      --cream-light: #F8F4ED;
+      --emerald: #31443D;
+      --sage: #5F736C;
+      --gold: #A97C2B;
+      --charcoal: #2B2B2B;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--charcoal);
+      background: var(--cream-light);
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 244, 237, 0.96);
+      border-bottom: 1px solid rgba(49, 68, 61, 0.10);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--emerald);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald);
+    }
+
+    .hero {
+      background: var(--emerald);
+      color: var(--white);
+      padding: 95px 30px 85px;
+      text-align: center;
+    }
+
+    .hero .eyebrow {
+      color: #E7CC96;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      max-width: 690px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .policy-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 90px 30px;
+    }
+
+    .updated {
+      color: var(--sage);
+      font-size: 0.82rem;
+      margin-bottom: 35px;
+    }
+
+    .policy-section {
+      margin-bottom: 42px;
+    }
+
+    .policy-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: #59615C;
+    }
+
+    .policy-section ul {
+      margin: 15px 0 0 22px;
+    }
+
+    .policy-section li {
+      margin-bottom: 8px;
+    }
+
+    .policy-section a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #25332E;
+      color: rgba(255,255,255,0.78);
+      padding: 70px 30px 28px;
+    }
+
+    .footer-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.13);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand .tagline {
+      color: #D8B979;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 17px;
+    }
+
+    .footer-column h4 {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.82rem;
+    }
+
+    .copyright {
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.52);
+    }
+
+    @media (max-width: 800px) {
+      nav ul {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-wrap">
+
+      <a href="index.html" class="brand">
+        <img src="bee-logo.png" alt="All Things Bee logo">
+        <span class="brand-name">All Things Bee</span>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#meet-bee">About Bee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="eyebrow">All Things Bee</div>
+
+      <h1>Terms & Conditions</h1>
+
+      <p>
+        These terms describe the rules and conditions for using the
+        All Things Bee website.
+      </p>
+    </section>
+
+    <section class="policy-wrap">
+
+      <div class="updated">
+        Last updated: October 6, 2026
+      </div>
+
+      <div class="policy-section">
+        <h2>1. Acceptance of Terms</h2>
+
+        <p>
+          By accessing or using the All Things Bee website, you agree to these
+          Terms & Conditions. If you do not agree with these terms, please do
+          not use the website.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>2. About This Website</h2>
+
+        <p>
+          The All Things Bee website provides information about the All Things
+          Bee brand, greeting-card collections, encouraging content, upcoming
+          products and ways to connect with us.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>3. Website Content</h2>
+
+        <p>
+          Content appearing on this website is provided for general
+          informational and promotional purposes. We may update, remove or
+          change website content at any time without prior notice.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>4. Intellectual Property</h2>
+
+        <p>
+          Unless otherwise stated, the content on this website, including
+          written copy, graphics, branding, logos, card designs, photographs
+          and other creative materials created for All Things Bee, belongs to
+          All Things Bee or is used with permission.
+        </p>
+
+        <p>
+          You may not reproduce, distribute, modify, republish or use our
+          original content for commercial purposes without prior written
+          permission.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>5. Newsletter and Email Signups</h2>
+
+        <p>
+          If you voluntarily join the All Things Bee mailing list, you agree
+          to receive occasional communications from us. You may unsubscribe
+          at any time.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>6. Contact Form Submissions</h2>
+
+        <p>
+          When you use the website contact form, you agree to provide accurate
+          information and not submit unlawful, harmful, misleading or abusive
+          content.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>7. Third-Party Services and Links</h2>
+
+        <p>
+          The website may contain links to third-party services or websites,
+          including social media platforms and Formspree.
+        </p>
+
+        <p>
+          All Things Bee is not responsible for the availability, policies,
+          security or content of third-party websites or services.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>8. No Guarantee of Availability</h2>
+
+        <p>
+          We aim to keep the website available and functioning properly, but
+          we do not guarantee uninterrupted access or that every feature will
+          always remain available.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>9. Limitation of Liability</h2>
+
+        <p>
+          To the extent permitted by law, All Things Bee is not responsible
+          for indirect, incidental or consequential loss resulting from the
+          use of or inability to use this website.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>10. Future Products and Online Sales</h2>
+
+        <p>
+          All Things Bee may add direct product sales, online ordering or
+          additional services in the future. Additional policies regarding
+          payment, shipping, returns, refunds and purchases may be added when
+          those services become available.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>11. Changes to These Terms</h2>
+
+        <p>
+          We may update these Terms & Conditions from time to time. Updated
+          terms will be posted on this page with a revised effective date.
+        </p>
+      </div>
+
+      <div class="policy-section">
+        <h2>12. Contact</h2>
+
+        <p>
+          Questions about these Terms & Conditions may be submitted through
+          our <a href="contact.html">Contact page</a>.
+        </p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <h3>All Things Bee</h3>
+
+          <div class="tagline">
+            Simple. Elegant. Strong.
+          </div>
+
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            for encouragement, inspiration, celebration and the moments
+            in between.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+
+          <a href="index.html">Home</a>
+          <a href="encouragement.html">Encouragement</a>
+          <a href="celebration.html">Celebration & Wins</a>
+          <a href="everyday.html">Everyday Moments</a>
+          <a href="about.html">About Bee</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Connect</h4>
+
+          <a href="contact.html">Contact Us</a>
+
+          <a
+            href="https://www.instagram.com/allthings_bee/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        <div>
+          © 2026 All Things Bee. All rights reserved.
+        </div>
+
+        <div>
+          Encouragement • Inspiration • Celebration
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
