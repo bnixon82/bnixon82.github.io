@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | All Things Bee</title>
+
+  <meta
+    name="description"
+    content="Contact All Things Bee with questions, collaborations, feedback or general inquiries."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <style>
+    :root {
+      --cream: #E9DFCF;
+      --cream-light: #F8F4ED;
+      --cream-soft: #F3EDE4;
+      --emerald: #31443D;
+      --sage: #5F736C;
+      --gold: #A97C2B;
+      --gold-soft: #B78A34;
+      --charcoal: #2B2B2B;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: var(--charcoal);
+      background: var(--cream-light);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 244, 237, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(49, 68, 61, 0.10);
+    }
+
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--emerald);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald);
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      background:
+        linear-gradient(
+          rgba(49, 68, 61, 0.94),
+          rgba(49, 68, 61, 0.94)
+        );
+      color: var(--white);
+      text-align: center;
+      padding: 100px 30px 90px;
+    }
+
+    .hero .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      color: #E7CC96;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.2rem, 7vw, 5.4rem);
+      line-height: 1;
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .hero .script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.35rem;
+      font-weight: 400;
+      color: #E0BE7D;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.8;
+    }
+
+    /* CONTACT */
+
+    .contact-section {
+      padding: 100px 30px;
+      background: var(--cream-light);
+    }
+
+    .contact-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+      align-items: start;
+    }
+
+    .contact-copy .small-title {
+      color: var(--gold);
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      margin-bottom: 12px;
+    }
+
+    .contact-copy h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .contact-copy p {
+      color: #5C655F;
+      margin-bottom: 18px;
+    }
+
+    .contact-note {
+      margin-top: 32px;
+      padding: 25px;
+      background: var(--cream);
+      border-left: 3px solid var(--gold);
+    }
+
+    .contact-note h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+
+    .contact-note p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+
+    .contact-note a {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* FORM */
+
+    .form-card {
+      background: var(--white);
+      padding: 45px;
+      box-shadow: 0 15px 40px rgba(49, 68, 61, 0.08);
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--emerald);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      border: 1px solid #D9D4CB;
+      background: #FCFAF6;
+      color: var(--charcoal);
+      padding: 14px 15px;
+      outline: none;
+      font-size: 0.95rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(169, 124, 43, 0.08);
+    }
+
+    .form-group textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      border: none;
+      background: var(--gold);
+      color: var(--white);
+      padding: 16px 24px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #916923;
+      transform: translateY(-2px);
+    }
+
+    .form-privacy {
+      margin-top: 14px;
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: #777F79;
+      text-align: center;
+    }
+
+    .form-privacy a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    /* SOCIAL */
+
+    .social-section {
+      background: var(--cream);
+      padding: 80px 30px;
+      text-align: center;
+    }
+
+    .social-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .social-inner .bee {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .social-inner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .social-inner p {
+      color: #626B65;
+      margin-bottom: 24px;
+    }
+
+    .instagram-link {
+      display: inline-block;
+      color: var(--emerald);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #25332E;
+      color: rgba(255,255,255,0.78);
+      padding: 70px 30px 28px;
+    }
+
+    .footer-inner {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.13);
+    }
+
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .footer-brand .tagline {
+      color: #D8B979;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 17px;
+    }
+
+    .footer-brand p {
+      max-width: 380px;
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+
+    .footer-column h4 {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.82rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: #D8B979;
+    }
+
+    .copyright {
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.52);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--cream-light);
+        border-top: 1px solid rgba(49,68,61,0.10);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 30px;
+        gap: 22px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav-wrap {
+        padding: 12px 20px;
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .hero {
+        padding: 80px 22px 70px;
+      }
+
+      .contact-section,
+      .social-section {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .form-card {
+        padding: 28px 22px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+    <div class="nav-wrap">
+
+      <a href="index.html" class="brand">
+        <img src="bee-logo.png" alt="All Things Bee logo">
+        <span class="brand-name">All Things Bee</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#meet-bee">About Bee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/allthings_bee/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        All Things Bee
+      </div>
+
+      <div class="script">
+        Let's stay connected
+      </div>
+
+      <h1>
+        Contact Us
+      </h1>
+
+      <p>
+        Have a question, want to share a little love, or just want to say hello?
+        We'd love to hear from you.
+      </p>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact-section">
+
+      <div class="contact-grid">
+
+        <div class="contact-copy">
+
+          <div class="small-title">
+            Send a little note
+          </div>
+
+          <h2>
+            We're happy you're here.
+          </h2>
+
+          <p>
+            Whether you're reaching out about an All Things Bee card,
+            a future collaboration, a website question or simply want to
+            share what's on your heart, this is the place.
+          </p>
+
+          <p>
+            Fill out the form and we'll get back to you as soon as we can.
+          </p>
+
+          <div class="contact-note">
+
+            <h3>
+              Prefer Instagram?
+            </h3>
+
+            <p>
+              You can also connect with us at
+              <a
+                href="https://www.instagram.com/allthings_bee/"
+                target="_blank"
+                rel="noopener"
+              >
+                @allthings_bee
+              </a>.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="form-card">
+
+          <form
+            action="https://formspree.io/f/xyekkkbl"
+            method="POST"
+          >
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New All Things Bee Contact Form Submission"
+            >
+
+            <div class="form-row">
+
+              <div class="form-group">
+                <label for="first-name">
+                  First Name
+                </label>
+
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  placeholder="First name"
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="last-name">
+                  Last Name
+                </label>
+
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  placeholder="Last name"
+                  required
+                >
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+              <label for="email">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                required
+              >
+            </div>
+
+
+            <div class="form-group">
+              <label for="reason">
+                What can we help with?
+              </label>
+
+              <select
+                id="reason"
+                name="reason"
+                required
+              >
+                <option value="" disabled selected>
+                  Select an option
+                </option>
+
+                <option value="General Question">
+                  General Question
+                </option>
+
+                <option value="Card or Product Question">
+                  Card or Product Question
+                </option>
+
+                <option value="Collaboration">
+                  Collaboration
+                </option>
+
+                <option value="Wholesale or Retail Inquiry">
+                  Wholesale or Retail Inquiry
+                </option>
+
+                <option value="Website Feedback">
+                  Website Feedback
+                </option>
+
+                <option value="Just Saying Hello">
+                  Just Saying Hello
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <label for="subject">
+                Subject
+              </label>
+
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What's your message about?"
+                required
+              >
+            </div>
+
+
+            <div class="form-group">
+              <label for="message">
+                Message
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+            </div>
+
+
+            <button
+              type="submit"
+              class="submit-btn"
+            >
+              Send My Note
+            </button>
+
+
+            <div class="form-privacy">
+              By submitting this form, you agree that All Things Bee may
+              use the information provided to respond to your inquiry.
+              Please review our
+              <a href="privacy.html">Privacy Policy</a>.
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOCIAL SECTION -->
+
+    <section class="social-section">
+
+      <div class="social-inner">
+
+        <div class="bee">
+          🐝
+        </div>
+
+        <h2>
+          Come see what we're creating.
+        </h2>
+
+        <p>
+          Follow along for Sweet Reminder Sunday, behind-the-scenes moments,
+          card releases and everything blooming at All Things Bee.
+        </p>
+
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/allthings_bee/"
+          target="_blank"
+          rel="noopener"
+        >
+          Follow @allthings_bee →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>
+            All Things Bee
+          </h3>
+
+          <div class="tagline">
+            Simple. Elegant. Strong.
+          </div>
+
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            for encouragement, inspiration, celebration and the moments
+            in between.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">
+            Home
+          </a>
+
+          <a href="encouragement.html">
+            Encouragement
+          </a>
+
+          <a href="celebration.html">
+            Celebration & Wins
+          </a>
+
+          <a href="everyday.html">
+            Everyday Moments
+          </a>
+
+          <a href="about.html">
+            About Bee
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Connect
+          </h4>
+
+          <a href="contact.html">
+            Contact Us
+          </a>
+
+          <a
+            href="https://www.instagram.com/allthings_bee/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <div>
+          © 2026 All Things Bee. All rights reserved.
+        </div>
+
+        <div>
+          Encouragement • Inspiration • Celebration
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+
+  <script>
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+
+      mainNav.classList.toggle('open');
+
+      if (mainNav.classList.contains('open')) {
+        menuToggle.textContent = '✕';
+      } else {
+        menuToggle.textContent = '☰';
+      }
+
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+
+      link.addEventListener('click', function () {
+
+        mainNav.classList.remove('open');
+        menuToggle.textContent = '☰';
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
