@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Celebration Collection | All Things Bee</title>
-   <link rel="icon" type="image/png" href="Images/favicon.png">
+  <title>Celebration & Wins | All Things Bee</title>
+
+  <meta
+    name="description"
+    content="Explore the All Things Bee Celebration & Wins Collection — thoughtful greeting cards for birthdays, milestones, accomplishments, congratulations and all the beautiful moments worth celebrating."
+  >
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
   <style>
+    :root {
+      --cream: #E9DFCF;
+      --cream-light: #F8F4ED;
+      --cream-soft: #F3EDE4;
+      --emerald: #31443D;
+      --sage: #5F736C;
+      --gold: #A97C2B;
+      --gold-soft: #B78A34;
+      --charcoal: #2B2B2B;
+      --white: #FFFFFF;
+    }
 
     * {
       margin: 0;
@@ -26,484 +48,1145 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     body {
       font-family: 'Raleway', sans-serif;
-      background-color: #F6F1E7;
-      color: #31443D;
+      color: var(--charcoal);
+      background: var(--cream-light);
       line-height: 1.7;
     }
 
-    /* NAVIGATION */
-
-    nav {
-      position: fixed;
-      top: 0;
+    img {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 70px;
-      background: rgba(246, 241, 231, 0.86);
-      backdrop-filter: blur(10px);
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(95, 115, 108, 0.08);
+      background: rgba(248, 244, 237, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(49, 68, 61, 0.10);
     }
 
-    .logo {
-      text-decoration: none;
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      line-height: 1;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    .logo-main {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.6rem;
-      font-weight: 500;
-      color: #31443D;
-    }
-
-    .bee-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
-      color: #B89B5E;
-      margin-top: -18px;
-    }
-
-    .logo-sub {
-      font-size: 0.8rem;
-      letter-spacing: 6px;
-      color: #31443D;
-      margin-top: -5px;
-    }
-
-    .back-home {
-      text-decoration: none;
-      color: #31443D;
+      font-size: 1.65rem;
+      font-weight: 600;
       letter-spacing: 1px;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
+      color: var(--emerald);
     }
 
-    .back-home:hover {
-      color: #B89B5E;
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald);
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      cursor: pointer;
     }
 
     /* HERO */
 
-    .hero-section {
-      min-height: 100vh;
-
-      background:
-        linear-gradient(rgba(49, 68, 61, 0.68), rgba(49, 68, 61, 0.68)),
-        url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop') center/cover;
-
+    .hero {
+      min-height: 68vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-
-      padding: 220px 20px 120px;
-
-      color: #F8F3EA;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(39, 45, 35, 0.82) 0%,
+          rgba(39, 45, 35, 0.60) 48%,
+          rgba(39, 45, 35, 0.18) 100%
+        ),
+        url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+      color: var(--white);
     }
 
-    .hero-content {
-      max-width: 900px;
+    .hero-inner {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      padding: 90px 30px;
     }
 
-    .hero-subtitle {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
-      color: #DCC9A3;
-      margin-bottom: 16px;
+    .hero-copy {
+      max-width: 690px;
     }
 
-    .hero-title {
+    .eyebrow {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #F0D7A6;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 5.2rem;
-      line-height: 1.05;
+      font-size: clamp(3.4rem, 7vw, 6rem);
+      line-height: 0.98;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-family: 'Great Vibes', cursive;
+      font-weight: 400;
+      color: #F2D59E;
+      margin-top: 8px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: rgba(255,255,255,0.90);
+      font-size: 1.03rem;
+      line-height: 1.9;
       margin-bottom: 28px;
     }
 
-    .hero-text {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #F4EEE4;
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #916923;
+      border-color: #916923;
+      transform: translateY(-2px);
     }
 
     /* INTRO */
 
-    .intro-section {
-      padding: 120px 12%;
+    .intro {
+      padding: 95px 30px;
+      background: var(--cream);
       text-align: center;
+    }
+
+    .intro-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .bee-mark {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .script-heading {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-size: 2.2rem;
+      margin-bottom: 4px;
     }
 
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      margin-bottom: 24px;
-      color: #31443D;
-    }
-
-    .section-text {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #5F736C;
-    }
-
-    /* PREVIEW GRID */
-
-    .preview-section {
-      padding: 40px 12% 120px;
-    }
-
-    .preview-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-    }
-
-    .preview-card {
-      background: #FCFAF6;
-      border-radius: 28px;
-      padding: 50px 35px;
-      text-align: center;
-      box-shadow: 0 14px 35px rgba(49, 68, 61, 0.08);
-      border: 1px solid rgba(95, 115, 108, 0.08);
-
-      transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-    }
-
-    .preview-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 18px 45px rgba(49, 68, 61, 0.12);
-    }
-
-    .card-accent {
-      width: 55px;
-      height: 2px;
-      background: #C8A96B;
-      margin: 0 auto 26px;
-    }
-
-    .preview-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      margin-bottom: 18px;
-      color: #31443D;
-    }
-
-    .preview-card p {
-      color: #5C6E67;
-      font-size: 1rem;
-    }
-
-    /* LAUNCH SECTION */
-
-    .launch-section {
-      padding: 120px 12%;
-      text-align: center;
-      background: #EFE5D7;
-    }
-
-    .launch-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      color: #B89B5E;
-      margin-bottom: 10px;
-    }
-
-    .launch-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.4rem;
-      color: #31443D;
+      color: var(--emerald);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 500;
       margin-bottom: 20px;
     }
 
-    .launch-text {
-      max-width: 650px;
+    .intro p {
+      font-family: 'Cormorant Garamond', serif;
+      color: #4F5952;
+      font-size: 1.35rem;
+      line-height: 1.7;
+    }
+
+    /* FEATURED */
+
+    .featured {
+      padding: 105px 30px;
+      background: var(--cream-light);
+    }
+
+    .featured-grid {
+      max-width: 1150px;
       margin: 0 auto;
-      color: #5F736C;
-      font-size: 1.05rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
     }
 
-    /* BUTTON */
-
-    .hero-button {
-      display: inline-block;
-      margin-top: 40px;
-
-      background-color: #5F736C;
-      color: #F8F3EA;
-
-      padding: 16px 38px;
-
-      border-radius: 50px;
-      text-decoration: none;
-
-      font-weight: 600;
-      letter-spacing: 1px;
-
-      transition: 0.3s ease;
+    .featured-image {
+      position: relative;
     }
 
-    .hero-button:hover {
-      background-color: #4D615B;
-      transform: translateY(-3px);
+    .featured-image img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      box-shadow: 0 18px 50px rgba(30, 43, 38, 0.14);
+    }
+
+    .featured-image::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      right: 16px;
+      bottom: 16px;
+      border: 1px solid rgba(169, 124, 43, 0.35);
+      pointer-events: none;
+    }
+
+    .featured-copy .small-title {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .featured-copy h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      line-height: 1;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .featured-copy p {
+      color: #606961;
+      margin-bottom: 17px;
+      line-height: 1.9;
+    }
+
+    .featured-quote {
+      border-left: 2px solid var(--gold);
+      padding-left: 22px;
+      margin: 28px 0;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.45rem;
+      font-style: italic;
+    }
+
+    /* CELEBRATION MOMENTS */
+
+    .moments {
+      background: var(--emerald);
+      padding: 105px 30px;
+      color: var(--white);
+    }
+
+    .moments-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .moments .script-heading {
+      color: #E4C384;
+    }
+
+    .moments h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.7rem, 5vw, 4.3rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .moments > .moments-inner > p {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.9;
+    }
+
+    .moment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+
+    .moment-card {
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 32px 28px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .moment-card span {
+      display: block;
+      color: #D9B66B;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .moment-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .moment-card p {
+      color: rgba(255,255,255,0.74);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* COMING SOON */
+
+    .coming {
+      padding: 105px 30px;
+      background: var(--white);
+    }
+
+    .coming-head {
+      max-width: 780px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .coming-head p {
+      color: #667069;
+    }
+
+    .coming-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .coming-card {
+      background: var(--cream-soft);
+      padding: 42px 30px;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+
+    .coming-card span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .coming-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .coming-card p {
+      color: #626B64;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* REMINDER */
+
+    .reminder {
+      padding: 105px 30px;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .reminder-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .reminder h2 {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-weight: 400;
+      font-size: clamp(3rem, 6vw, 5rem);
+      margin-bottom: 18px;
+    }
+
+    .reminder-quote {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+
+    .reminder p {
+      color: #687068;
+      margin-bottom: 22px;
+    }
+
+    .text-link {
+      color: var(--emerald);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    /* OTHER COLLECTIONS */
+
+    .other-collections {
+      padding: 100px 30px;
+      background: var(--cream-light);
+    }
+
+    .other-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .other-card {
+      background: var(--white);
+      padding: 35px 28px;
+      border: 1px solid rgba(49, 68, 61, 0.10);
+      transition: all 0.3s ease;
+    }
+
+    .other-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(49, 68, 61, 0.08);
+    }
+
+    .other-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+
+    .other-card p {
+      color: #667069;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
     }
 
     /* FOOTER */
 
     footer {
-      background-color: #31443D;
-      color: #F8F3EA;
-      text-align: center;
-      padding: 55px 20px;
+      background: #25332E;
+      color: rgba(255,255,255,0.78);
+      padding: 70px 30px 28px;
     }
 
-    footer h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.4rem;
-      color: #DCC9A3;
-      margin-bottom: 10px;
+    .footer-inner {
+      max-width: 1150px;
+      margin: 0 auto;
     }
 
-    footer p {
-      letter-spacing: 1px;
-      color: #E9DFCF;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.13);
     }
-    .social-icons {
-  margin-top: 22px;
-}
 
-.social-icons a {
-  color: #DCC9A3;
-  font-size: 1.8rem;
-  transition: 0.3s ease;
-}
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
 
-.social-icons a:hover {
-  color: #F8F3EA;
-  transform: translateY(-2px);
-}
+    .footer-brand .tagline {
+      color: #D8B979;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 17px;
+    }
+
+    .footer-brand p {
+      max-width: 380px;
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+
+    .footer-column h4 {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.82rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: #D8B979;
+    }
+
+    .copyright {
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.52);
+    }
 
     /* MOBILE */
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+      }
 
       nav {
-        padding: 18px 20px;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--cream-light);
+        border-top: 1px solid rgba(49,68,61,0.10);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
         flex-direction: column;
-        gap: 14px;
+        padding: 30px;
+        gap: 22px;
       }
 
-      .logo-main {
-        font-size: 2.5rem;
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
       }
 
-      .bee-script {
-        font-size: 3rem;
+      .moment-grid,
+      .coming-grid,
+      .other-grid {
+        grid-template-columns: 1fr;
       }
 
-      .logo-sub {
-        font-size: 0.6rem;
-        letter-spacing: 4px;
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .hero-title {
-        font-size: 3.4rem;
+      .footer-brand {
+        grid-column: 1 / -1;
       }
-
-      .hero-subtitle {
-        font-size: 1.8rem;
-      }
-
-      .section-title {
-        font-size: 2.8rem;
-      }
-
-      .launch-title {
-        font-size: 2.8rem;
-      }
-
-      .preview-card {
-        transform: translateY(-4px);
-      }
-
     }
 
+    @media (max-width: 650px) {
+      .nav-wrap {
+        padding: 12px 20px;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+      }
+
+      .hero {
+        min-height: 62vh;
+        background-position: 60% center;
+      }
+
+      .hero-inner {
+        padding: 75px 22px;
+      }
+
+      .intro,
+      .featured,
+      .moments,
+      .coming,
+      .reminder,
+      .other-collections {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .featured-image::before {
+        top: -10px;
+        left: -10px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- HEADER -->
 
-  <nav>
+  <header>
+    <div class="nav-wrap">
 
-    <a href="index.html" class="logo">
+      <a href="index.html" class="brand">
+        <img src="/bee-logo.png" alt="All Things Bee logo">
+        <span class="brand-name">All Things Bee</span>
+      </a>
 
-      <div class="logo-main">
-        All Things
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+      </button>
 
-      <div class="bee-script">
-        Bee
-      </div>
-
-      <div class="logo-sub">
-        GREETING CARDS
-      </div>
-
-    </a>
-
-    <a href="index.html" class="back-home">
-      ← Back To Home
-    </a>
-
-  </nav>
-
-  <!-- HERO -->
-
-  <section class="hero-section">
-
-    <div class="hero-content">
-
-      <div class="hero-subtitle">
-        Celebration Collection
-      </div>
-
-      <h1 class="hero-title">
-        Thoughtfully Designed To Celebrate Life’s Meaningful Moments
-      </h1>
-
-      <p class="hero-text">
-        Elegant greeting cards created to honor milestones, new beginnings,
-        heartfelt accomplishments, and the moments worth celebrating.
-      </p>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#meet-bee">About Bee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/allthings_bee/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
 
     </div>
+  </header>
 
-  </section>
 
-  <!-- INTRO -->
+  <main>
 
-  <section class="intro-section">
+    <!-- HERO -->
 
-    <h2 class="section-title">
-      Created For Moments Worth Remembering
-    </h2>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy">
 
-    <p class="section-text">
-      The Celebration Collection was designed to capture the beauty of
-      meaningful milestones — offering elevated cards rooted in joy,
-      encouragement, connection, and intentional celebration.
-    </p>
+          <div class="eyebrow">
+            Celebrate the Moment
+          </div>
 
-  </section>
+          <h1>
+            Celebration & Wins
+            <span>because joy deserves words.</span>
+          </h1>
 
-  <!-- PREVIEW GRID -->
+          <p>
+            Thoughtfully created cards for birthdays, milestones,
+            accomplishments, congratulations and the beautiful moments
+            that deserve to be remembered.
+          </p>
 
-  <section class="preview-section">
+          <a href="#celebrate" class="btn">
+            Explore the Collection
+          </a>
 
-    <div class="preview-grid">
+        </div>
+      </div>
+    </section>
 
-      <div class="preview-card">
 
-        <div class="card-accent"></div>
+    <!-- INTRO -->
 
-        <h3>
-          New Beginnings
-        </h3>
+    <section class="intro">
+
+      <div class="intro-inner">
+
+        <div class="bee-mark">🐝</div>
+
+        <div class="script-heading">
+          Make the moment feel even more special
+        </div>
+
+        <h2 class="section-title">
+          Some wins deserve more than a text.
+        </h2>
 
         <p>
-          Elegant designs created to celebrate fresh starts, growth, and possibility.
+          A birthday. A graduation. A promotion. A dream finally becoming real.
+          Celebration is about slowing down long enough to say,
+          “I see what you did, and I’m proud of you.”
         </p>
 
       </div>
 
-      <div class="preview-card">
+    </section>
 
-        <div class="card-accent"></div>
 
-        <h3>
-          Meaningful Milestones
-        </h3>
+    <!-- FEATURED -->
+
+    <section class="featured" id="celebrate">
+
+      <div class="featured-grid">
+
+        <div class="featured-image">
+
+          <!-- Replace with a real Celebration card photo later -->
+
+          <img
+            src="https://images.unsplash.com/photo-1513159446162-54eb8bdaa79b?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant celebration setting"
+          >
+
+        </div>
+
+        <div class="featured-copy">
+
+          <div class="small-title">
+            A signature celebration
+          </div>
+
+          <h2>
+            Happy Birthday.
+          </h2>
+
+          <p>
+            Birthdays are more than another year passing.
+            They are a chance to honor a life, celebrate growth and remind
+            someone just how much their presence matters.
+          </p>
+
+          <p>
+            The All Things Bee birthday card is being designed to feel warm,
+            intentional and elevated — something beautiful enough to keep
+            long after the candles are gone.
+          </p>
+
+          <div class="featured-quote">
+            “Here’s to another year of becoming more of who you were always meant to be.”
+          </div>
+
+          <p>
+            A card for celebrating the person, not just the date.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MOMENTS -->
+
+    <section class="moments">
+
+      <div class="moments-inner">
+
+        <div class="script-heading">
+          There is always something worth celebrating
+        </div>
+
+        <h2>
+          For big wins, small wins and everything in between.
+        </h2>
 
         <p>
-          Keepsake-worthy cards honoring accomplishments, transitions, and special moments.
+          Celebration looks different for everyone. Sometimes it is loud and
+          joyful. Sometimes it is quiet pride. Either way, the right words can
+          make the moment feel even more meaningful.
+        </p>
+
+        <div class="moment-grid">
+
+          <div class="moment-card">
+            <span>01</span>
+
+            <h3>Birthdays</h3>
+
+            <p>
+              Thoughtful birthday messages that celebrate the person,
+              their growth and the beauty of another year.
+            </p>
+          </div>
+
+          <div class="moment-card">
+            <span>02</span>
+
+            <h3>Milestones</h3>
+
+            <p>
+              Cards for graduations, anniversaries, new beginnings,
+              major life moments and dreams becoming reality.
+            </p>
+          </div>
+
+          <div class="moment-card">
+            <span>03</span>
+
+            <h3>Congratulations</h3>
+
+            <p>
+              For promotions, accomplishments, brave decisions and every
+              moment that deserves a genuine “you did it.”
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMING SOON -->
+
+    <section class="coming">
+
+      <div class="coming-head">
+
+        <div class="script-heading">
+          Growing the collection
+        </div>
+
+        <h2 class="section-title">
+          More ways to celebrate are coming.
+        </h2>
+
+        <p>
+          New cards are being thoughtfully developed for the people,
+          milestones and moments that make life worth celebrating.
         </p>
 
       </div>
 
-      <div class="preview-card">
+      <div class="coming-grid">
 
-        <div class="card-accent"></div>
+        <div class="coming-card">
+          <span>Coming Soon</span>
 
-        <h3>
-          Coming Soon
-        </h3>
+          <h3>Happy Birthday</h3>
 
-        <p>
-          The first Celebration Collection is currently being thoughtfully designed.
-        </p>
+          <p>
+            A meaningful birthday card centered on joy, reflection and
+            celebrating another beautiful year of life.
+          </p>
+        </div>
+
+        <div class="coming-card">
+          <span>Coming Soon</span>
+
+          <h3>Congratulations</h3>
+
+          <p>
+            For the big news, the hard-earned victory and the moment when
+            “I knew you could do it” deserves to be written down.
+          </p>
+        </div>
+
+        <div class="coming-card">
+          <span>Coming Soon</span>
+
+          <h3>You Did That</h3>
+
+          <p>
+            A joyful reminder for the person who worked, stretched,
+            pushed through and made something happen.
+          </p>
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
 
-  <!-- LAUNCH -->
+    <!-- SWEET REMINDER -->
 
-  <section class="launch-section">
+    <section class="reminder">
 
-    <div class="launch-script">
-      Launching Fall 2026
-    </div>
+      <div class="reminder-inner">
 
-    <h2 class="launch-title">
-      Celebration Is In The Details
-    </h2>
+        <div class="bee-mark">🐝</div>
 
-    <p class="launch-text">
-      Be the first to preview upcoming designs, launch announcements,
-      and meaningful moments from All Things Bee.
-    </p>
+        <h2>
+          A Sweet Reminder
+        </h2>
 
-    <a href="index.html#contact" class="hero-button">
-      Join The Launch List
-    </a>
+        <div class="reminder-quote">
+          Celebrate how far you have come, even while you are still becoming.
+        </div>
 
-  </section>
+        <p>
+          Follow All Things Bee on Instagram for weekly Sweet Reminder Sunday
+          encouragement and behind-the-scenes glimpses of what we're creating.
+        </p>
+
+        <a
+          href="https://www.instagram.com/allthings_bee/"
+          target="_blank"
+          rel="noopener"
+          class="text-link"
+        >
+          Follow @allthings_bee
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- OTHER COLLECTIONS -->
+
+    <section class="other-collections">
+
+      <div class="coming-head">
+
+        <div class="script-heading">
+          Keep exploring
+        </div>
+
+        <h2 class="section-title">
+          Find the words for every moment.
+        </h2>
+
+      </div>
+
+      <div class="other-grid">
+
+        <a href="encouragement.html" class="other-card">
+          <h3>Encouragement</h3>
+
+          <p>
+            Gentle reminders for hard days, new beginnings and quiet strength.
+          </p>
+
+          <span class="text-link">Explore →</span>
+        </a>
+
+        <a href="everyday-moments.html" class="other-card">
+          <h3>Everyday Moments</h3>
+
+          <p>
+            Thoughtful words for friendship, gratitude, love and simply thinking of you.
+          </p>
+
+          <span class="text-link">Explore →</span>
+        </a>
+
+        <a href="evergreen.html" class="other-card">
+          <h3>Evergreen</h3>
+
+          <p>
+            Timeless messages created to stay meaningful beyond a single occasion.
+          </p>
+
+          <span class="text-link">Explore →</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
 
   <!-- FOOTER -->
 
   <footer>
 
-    <h3>
-      All Things Bee
-    </h3>
+    <div class="footer-inner">
 
-    <p>
-      Encouragement • Inspiration • Meaningful Connection
-    </p>
-  <div class="social-icons">
+      <div class="footer-grid">
 
-  <a href="https://www.instagram.com/allthings_bee/"
-     target="_blank"
-     aria-label="Instagram">
+        <div class="footer-brand">
 
-    <i class="fa-brands fa-instagram"></i>
+          <h3>All Things Bee</h3>
 
-  </a>
+          <div class="tagline">
+            Simple. Elegant. Strong.
+          </div>
 
-</div>
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            for encouragement, inspiration, celebration and the moments
+            in between.
+          </p>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Explore</h4>
+
+          <a href="index.html">Home</a>
+          <a href="encouragement.html">Encouragement</a>
+          <a href="celebration.html">Celebration & Wins</a>
+          <a href="everyday-moments.html">Everyday Moments</a>
+          <a href="evergreen.html">Evergreen</a>
+          <a href="index.html#meet-bee">About Bee</a>
+
+        </div>
+
+        <div class="footer-column">
+
+          <h4>Connect</h4>
+
+          <a href="contact.html">Contact Us</a>
+
+          <a
+            href="https://www.instagram.com/allthings_bee/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+
+        </div>
+
+      </div>
+
+      <div class="copyright">
+
+        <div>
+          © 2026 All Things Bee. All rights reserved.
+        </div>
+
+        <div>
+          Encouragement • Inspiration • Celebration
+        </div>
+
+      </div>
+
+    </div>
+
   </footer>
+
+
+  <!-- MOBILE MENU -->
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+      mainNav.classList.toggle('open');
+
+      if (mainNav.classList.contains('open')) {
+        menuToggle.textContent = '✕';
+      } else {
+        menuToggle.textContent = '☰';
+      }
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+      link.addEventListener('click', function () {
+        mainNav.classList.remove('open');
+        menuToggle.textContent = '☰';
+      });
+    });
+  </script>
 
 </body>
 </html>
