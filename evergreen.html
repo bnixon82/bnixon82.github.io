@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Evergreen Collection | All Things Bee</title>
-  <link rel="icon" type="image/png" href="Images/favicon.png">
+
+  <meta
+    name="description"
+    content="Explore the All Things Bee Evergreen Collection — timeless greeting cards and meaningful words created to stay relevant today, tomorrow and beyond."
+  >
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png">
+
   <style>
+    :root {
+      --cream: #E9DFCF;
+      --cream-light: #F8F4ED;
+      --cream-soft: #F3EDE4;
+      --emerald: #31443D;
+      --sage: #5F736C;
+      --gold: #A97C2B;
+      --gold-soft: #B78A34;
+      --charcoal: #2B2B2B;
+      --white: #FFFFFF;
+    }
 
     * {
       margin: 0;
@@ -26,476 +48,1170 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     body {
       font-family: 'Raleway', sans-serif;
-      background-color: #F6F1E7;
-      color: #31443D;
+      color: var(--charcoal);
+      background: var(--cream-light);
       line-height: 1.7;
     }
 
-    /* NAVIGATION */
-
-    nav {
-      position: fixed;
-      top: 0;
+    img {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 70px;
-      background: rgba(246, 241, 231, 0.86);
-      backdrop-filter: blur(10px);
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(95, 115, 108, 0.08);
+      background: rgba(248, 244, 237, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(49, 68, 61, 0.10);
     }
 
-    .logo {
-      text-decoration: none;
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      line-height: 1;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    .logo-main {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.6rem;
-      font-weight: 500;
-      color: #31443D;
-    }
-
-    .bee-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
-      color: #B89B5E;
-      margin-top: -18px;
-    }
-
-    .logo-sub {
-      font-size: 0.8rem;
-      letter-spacing: 6px;
-      color: #31443D;
-      margin-top: -5px;
-    }
-
-    .back-home {
-      text-decoration: none;
-      color: #31443D;
+      font-size: 1.65rem;
+      font-weight: 600;
       letter-spacing: 1px;
-      font-size: 0.95rem;
-      transition: 0.3s ease;
+      color: var(--emerald);
     }
 
-    .back-home:hover {
-      color: #B89B5E;
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald);
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      cursor: pointer;
     }
 
     /* HERO */
 
-    .hero-section {
-      min-height: 100vh;
-
-      background:
-        linear-gradient(rgba(49, 68, 61, 0.76), rgba(49, 68, 61, 0.76)),
-        url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=1600&auto=format&fit=crop') center/cover;
-
+    .hero {
+      min-height: 68vh;
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-
-      padding: 220px 20px 120px;
-
-      color: #F8F3EA;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(32, 45, 40, 0.85) 0%,
+          rgba(32, 45, 40, 0.64) 48%,
+          rgba(32, 45, 40, 0.20) 100%
+        ),
+        url('https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+      color: var(--white);
     }
 
-    .hero-content {
-      max-width: 900px;
+    .hero-inner {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      padding: 90px 30px;
     }
 
-    .hero-subtitle {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
-      color: #DCC9A3;
-      margin-bottom: 16px;
+    .hero-copy {
+      max-width: 690px;
     }
 
-    .hero-title {
+    .eyebrow {
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #F0D7A6;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 5.1rem;
-      line-height: 1.05;
+      font-size: clamp(3.4rem, 7vw, 6rem);
+      line-height: 0.98;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      display: block;
+      font-family: 'Great Vibes', cursive;
+      font-weight: 400;
+      color: #F2D59E;
+      margin-top: 8px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: rgba(255,255,255,0.90);
+      font-size: 1.03rem;
+      line-height: 1.9;
       margin-bottom: 28px;
     }
 
-    .hero-text {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #F4EEE4;
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #916923;
+      border-color: #916923;
+      transform: translateY(-2px);
     }
 
     /* INTRO */
 
-    .intro-section {
-      padding: 120px 12%;
+    .intro {
+      padding: 95px 30px;
+      background: var(--cream);
       text-align: center;
+    }
+
+    .intro-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .bee-mark {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .script-heading {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-size: 2.2rem;
+      margin-bottom: 4px;
     }
 
     .section-title {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      margin-bottom: 24px;
-      color: #31443D;
+      color: var(--emerald);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 500;
+      margin-bottom: 20px;
     }
 
-    .section-text {
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      color: #5F736C;
-    }
-
-    /* COLLECTION GRID */
-
-    .season-section {
-      padding: 40px 12% 120px;
-    }
-
-    .season-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-    }
-
-    .season-card {
-      background: #FCFAF6;
-      border-radius: 28px;
-      padding: 50px 35px;
-      text-align: center;
-      box-shadow: 0 14px 35px rgba(49, 68, 61, 0.08);
-      border: 1px solid rgba(95, 115, 108, 0.08);
-
-      transition:
-        transform 0.35s ease,
-        box-shadow 0.35s ease;
-    }
-
-    .season-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 18px 45px rgba(49, 68, 61, 0.12);
-    }
-
-    .card-accent {
-      width: 55px;
-      height: 2px;
-      background: #C8A96B;
-      margin: 0 auto 26px;
-    }
-
-    .season-card h3 {
+    .intro p {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      margin-bottom: 18px;
-      color: #31443D;
+      color: #4F5952;
+      font-size: 1.35rem;
+      line-height: 1.7;
     }
 
-    .season-card p {
-      color: #5C6E67;
-      font-size: 1rem;
+    /* FEATURED */
+
+    .featured {
+      padding: 105px 30px;
+      background: var(--cream-light);
     }
 
-    /* FEATURE SECTION */
-
-    .feature-section {
-      background: #EFE5D7;
-      padding: 120px 12%;
-      text-align: center;
+    .featured-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
     }
 
-    .feature-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      color: #B89B5E;
+    .featured-image {
+      position: relative;
+    }
+
+    .featured-image img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      box-shadow: 0 18px 50px rgba(30, 43, 38, 0.14);
+    }
+
+    .featured-image::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: -16px;
+      right: 16px;
+      bottom: 16px;
+      border: 1px solid rgba(169, 124, 43, 0.35);
+      pointer-events: none;
+    }
+
+    .featured-copy .small-title {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
       margin-bottom: 10px;
     }
 
-    .feature-title {
+    .featured-copy h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.4rem;
-      color: #31443D;
+      color: var(--emerald);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      line-height: 1;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .featured-copy p {
+      color: #606961;
+      margin-bottom: 17px;
+      line-height: 1.9;
+    }
+
+    .featured-quote {
+      border-left: 2px solid var(--gold);
+      padding-left: 22px;
+      margin: 28px 0;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.45rem;
+      font-style: italic;
+    }
+
+    /* TIMELESS */
+
+    .timeless {
+      background: var(--emerald);
+      padding: 105px 30px;
+      color: var(--white);
+    }
+
+    .timeless-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .timeless .script-heading {
+      color: #E4C384;
+    }
+
+    .timeless h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.7rem, 5vw, 4.3rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 24px;
+    }
+
+    .timeless > .timeless-inner > p {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.9;
+    }
+
+    .timeless-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+    }
+
+    .timeless-card {
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 32px 28px;
+      background: rgba(255,255,255,0.035);
+    }
+
+    .timeless-card span {
+      display: block;
+      color: #D9B66B;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .timeless-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .timeless-card p {
+      color: rgba(255,255,255,0.74);
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* COMING */
+
+    .coming {
+      padding: 105px 30px;
+      background: var(--white);
+    }
+
+    .coming-head {
+      max-width: 780px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .coming-head p {
+      color: #667069;
+    }
+
+    .coming-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .coming-card {
+      background: var(--cream-soft);
+      padding: 42px 30px;
+      text-align: center;
+      border-top: 3px solid var(--gold);
+    }
+
+    .coming-card span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .coming-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .coming-card p {
+      color: #626B64;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+    /* REMINDER */
+
+    .reminder {
+      padding: 105px 30px;
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .reminder-inner {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .reminder h2 {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-weight: 400;
+      font-size: clamp(3rem, 6vw, 5rem);
+      margin-bottom: 18px;
+    }
+
+    .reminder-quote {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.25;
+      margin-bottom: 24px;
+    }
+
+    .reminder p {
+      color: #687068;
       margin-bottom: 22px;
     }
 
-    .feature-text {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #5F736C;
-      font-size: 1.05rem;
+    .text-link {
+      color: var(--emerald);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
+      font-size: 0.78rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      text-transform: uppercase;
     }
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 40px;
+    /* OTHER COLLECTIONS */
 
-      background-color: #5F736C;
-      color: #F8F3EA;
-
-      padding: 16px 38px;
-
-      border-radius: 50px;
-      text-decoration: none;
-
-      font-weight: 600;
-      letter-spacing: 1px;
-
-      transition: 0.3s ease;
+    .other-collections {
+      padding: 100px 30px;
+      background: var(--cream-light);
     }
 
-    .hero-button:hover {
-      background-color: #4D615B;
-      transform: translateY(-3px);
+    .other-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .other-card {
+      background: var(--white);
+      padding: 35px 28px;
+      border: 1px solid rgba(49, 68, 61, 0.10);
+      transition: all 0.3s ease;
+    }
+
+    .other-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 35px rgba(49, 68, 61, 0.08);
+    }
+
+    .other-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 9px;
+    }
+
+    .other-card p {
+      color: #667069;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
     }
 
     /* FOOTER */
 
     footer {
-      background-color: #31443D;
-      color: #F8F3EA;
-      text-align: center;
-      padding: 55px 20px;
+      background: #25332E;
+      color: rgba(255,255,255,0.78);
+      padding: 70px 30px 28px;
     }
 
-    footer h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.4rem;
-      color: #DCC9A3;
-      margin-bottom: 10px;
+    .footer-inner {
+      max-width: 1150px;
+      margin: 0 auto;
     }
 
-    footer p {
-      letter-spacing: 1px;
-      color: #E9DFCF;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.13);
     }
-    .social-icons {
-  margin-top: 22px;
-}
 
-.social-icons a {
-  color: #DCC9A3;
-  font-size: 1.8rem;
-  transition: 0.3s ease;
-}
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
 
-.social-icons a:hover {
-  color: #F8F3EA;
-  transform: translateY(-2px);
-}
+    .footer-brand .tagline {
+      color: #D8B979;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 17px;
+    }
+
+    .footer-brand p {
+      max-width: 380px;
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+
+    .footer-column h4 {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.82rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: #D8B979;
+    }
+
+    .copyright {
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.52);
+    }
 
     /* MOBILE */
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .menu-toggle {
+        display: block;
+      }
 
       nav {
-        padding: 18px 20px;
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--cream-light);
+        border-top: 1px solid rgba(49,68,61,0.10);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
         flex-direction: column;
-        gap: 14px;
+        padding: 30px;
+        gap: 22px;
       }
 
-      .logo-main {
-        font-size: 2.5rem;
+      .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
       }
 
-      .bee-script {
-        font-size: 3rem;
+      .timeless-grid,
+      .coming-grid,
+      .other-grid {
+        grid-template-columns: 1fr;
       }
 
-      .logo-sub {
-        font-size: 0.6rem;
-        letter-spacing: 4px;
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
       }
 
-      .hero-title {
-        font-size: 3.3rem;
+      .footer-brand {
+        grid-column: 1 / -1;
       }
-
-      .hero-subtitle {
-        font-size: 1.8rem;
-      }
-
-      .section-title {
-        font-size: 2.8rem;
-      }
-
-      .feature-title {
-        font-size: 2.8rem;
-      }
-
     }
 
+    @media (max-width: 650px) {
+      .nav-wrap {
+        padding: 12px 20px;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+      }
+
+      .hero {
+        min-height: 62vh;
+        background-position: 60% center;
+      }
+
+      .hero-inner {
+        padding: 75px 22px;
+      }
+
+      .intro,
+      .featured,
+      .timeless,
+      .coming,
+      .reminder,
+      .other-collections {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .featured-image::before {
+        top: -10px;
+        left: -10px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
+  <!-- HEADER -->
 
-  <nav>
+  <header>
+    <div class="nav-wrap">
 
-    <a href="index.html" class="logo">
+      <a href="index.html" class="brand">
+        <img src="/bee-logo.png" alt="All Things Bee logo">
+        <span class="brand-name">All Things Bee</span>
+      </a>
 
-      <div class="logo-main">
-        All Things
-      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
+      </button>
 
-      <div class="bee-script">
-        Bee
-      </div>
-
-      <div class="logo-sub">
-        GREETING CARDS
-      </div>
-
-    </a>
-
-    <a href="index.html" class="back-home">
-      ← Back To Home
-    </a>
-
-  </nav>
-
-  <!-- HERO -->
-
-  <section class="hero-section">
-
-    <div class="hero-content">
-
-      <div class="hero-subtitle">
-        Evergreen Collection
-      </div>
-
-      <h1 class="hero-title">
-        Seasonal Cards Created To Be Shared Year After Year
-      </h1>
-
-      <p class="hero-text">
-        Thoughtfully designed holiday and seasonal greeting cards rooted in warmth,
-        tradition, meaningful connection, and timeless celebration.
-      </p>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#collections">Collections</a></li>
+          <li><a href="index.html#meet-bee">About Bee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/allthings_bee/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
 
     </div>
+  </header>
 
-  </section>
 
-  <!-- INTRO -->
+  <main>
 
-  <section class="intro-section">
+    <!-- HERO -->
 
-    <h2 class="section-title">
-      Celebrating Traditions & Meaningful Seasons
-    </h2>
+    <section class="hero">
 
-    <p class="section-text">
-      The Evergreen Collection was created to honor the moments people return to year after year —
-      holidays, traditions, gatherings, and meaningful celebrations shared with the people who matter most.
-    </p>
+      <div class="hero-inner">
 
-  </section>
+        <div class="hero-copy">
 
-  <!-- SEASON GRID -->
+          <div class="eyebrow">
+            Always Meaningful
+          </div>
 
-  <section class="season-section">
+          <h1>
+            Evergreen
+            <span>words that last.</span>
+          </h1>
 
-    <div class="season-grid">
+          <p>
+            Timeless cards created for messages that do not belong to just
+            one season or occasion — meaningful words you can reach for
+            whenever someone needs them.
+          </p>
 
-      <div class="season-card">
+          <a href="#evergreen" class="btn">
+            Explore Evergreen
+          </a>
 
-        <div class="card-accent"></div>
+        </div>
 
-        <h3>
-          Holiday Traditions
-        </h3>
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+
+    <section class="intro">
+
+      <div class="intro-inner">
+
+        <div class="bee-mark">🐝</div>
+
+        <div class="script-heading">
+          Some words never go out of season
+        </div>
+
+        <h2 class="section-title">
+          Meaningful today. Meaningful tomorrow.
+        </h2>
 
         <p>
-          Elegant seasonal cards designed to celebrate warmth, gathering, and cherished traditions.
+          Evergreen was created for the messages that stay relevant —
+          gratitude, love, hope, reassurance and simple words of care
+          that can be given whenever the moment feels right.
         </p>
 
       </div>
 
-      <div class="season-card">
+    </section>
 
-        <div class="card-accent"></div>
 
-        <h3>
-          Meaningful Gatherings
-        </h3>
+    <!-- FEATURED -->
+
+    <section class="featured" id="evergreen">
+
+      <div class="featured-grid">
+
+        <div class="featured-image">
+
+          <!-- Replace with a real Evergreen card photo later -->
+
+          <img
+            src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=85"
+            alt="Elegant greenery and timeless stationery"
+          >
+
+        </div>
+
+        <div class="featured-copy">
+
+          <div class="small-title">
+            Timeless by design
+          </div>
+
+          <h2>
+            Here for You.
+          </h2>
+
+          <p>
+            Some messages do not need a birthday, holiday or specific
+            milestone attached to them.
+          </p>
+
+          <p>
+            Evergreen cards are being created to live beyond a single
+            occasion — thoughtful words you can keep on hand and reach for
+            when someone needs comfort, connection or a little reminder
+            that they are not alone.
+          </p>
+
+          <div class="featured-quote">
+            “Some words are meant for a moment. Others are meant to stay.”
+          </div>
+
+          <p>
+            Simple, intentional and always appropriate when the heart
+            knows there is something worth saying.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- TIMELESS -->
+
+    <section class="timeless">
+
+      <div class="timeless-inner">
+
+        <div class="script-heading">
+          Created to stay relevant
+        </div>
+
+        <h2>
+          Cards you do not have to wait for an occasion to send.
+        </h2>
 
         <p>
-          Thoughtful designs rooted in connection, celebration, gratitude, and togetherness.
+          Evergreen is designed around messages that remain meaningful
+          through different seasons of life.
+        </p>
+
+        <div class="timeless-grid">
+
+          <div class="timeless-card">
+            <span>01</span>
+
+            <h3>For reassurance</h3>
+
+            <p>
+              Words that remind someone they are supported, remembered
+              and not walking through life alone.
+            </p>
+          </div>
+
+          <div class="timeless-card">
+            <span>02</span>
+
+            <h3>For gratitude</h3>
+
+            <p>
+              Thoughtful messages that acknowledge kindness, presence
+              and the people who quietly make life better.
+            </p>
+          </div>
+
+          <div class="timeless-card">
+            <span>03</span>
+
+            <h3>For connection</h3>
+
+            <p>
+              Simple reminders of love, friendship and care that feel
+              just as meaningful without a special date on the calendar.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- COMING -->
+
+    <section class="coming">
+
+      <div class="coming-head">
+
+        <div class="script-heading">
+          Growing the collection
+        </div>
+
+        <h2 class="section-title">
+          Timeless messages are taking shape.
+        </h2>
+
+        <p>
+          Evergreen will continue growing with versatile cards that can
+          remain tucked away until the exact right moment arrives.
         </p>
 
       </div>
 
-      <div class="season-card">
 
-        <div class="card-accent"></div>
+      <div class="coming-grid">
 
-        <h3>
-          Coming Soon
-        </h3>
+        <div class="coming-card">
+          <span>Coming Soon</span>
 
-        <p>
-          The first Evergreen Collection is currently being thoughtfully designed for future seasonal launches.
-        </p>
+          <h3>Here for You</h3>
+
+          <p>
+            A simple message of support for the person who needs to know
+            they do not have to carry everything alone.
+          </p>
+        </div>
+
+        <div class="coming-card">
+          <span>Coming Soon</span>
+
+          <h3>You Matter</h3>
+
+          <p>
+            A timeless reminder that someone's presence, voice and story
+            have meaning.
+          </p>
+        </div>
+
+        <div class="coming-card">
+          <span>Coming Soon</span>
+
+          <h3>So Grateful for You</h3>
+
+          <p>
+            A warm expression of appreciation for the people whose kindness
+            and presence deserve to be acknowledged.
+          </p>
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </section>
 
-  <!-- FEATURE -->
+    <!-- SWEET REMINDER -->
 
-  <section class="feature-section">
+    <section class="reminder">
 
-    <div class="feature-script">
-      Designed To Return To Year After Year
-    </div>
+      <div class="reminder-inner">
 
-    <h2 class="feature-title">
-      Seasonal Storytelling With Heart
-    </h2>
+        <div class="bee-mark">🐝</div>
 
-    <p class="feature-text">
-      From heartfelt holidays to meaningful traditions, the Evergreen Collection is being thoughtfully created to blend timeless design, warmth, and emotional connection.
-    </p>
+        <h2>
+          A Sweet Reminder
+        </h2>
 
-    <a href="index.html#contact" class="hero-button">
-      Join The Launch List
-    </a>
+        <div class="reminder-quote">
+          The smallest reminder can arrive at exactly the right time.
+        </div>
 
-  </section>
+        <p>
+          Follow All Things Bee on Instagram for weekly Sweet Reminder Sunday
+          encouragement and behind-the-scenes glimpses of what we're creating.
+        </p>
+
+        <a
+          href="https://www.instagram.com/allthings_bee/"
+          target="_blank"
+          rel="noopener"
+          class="text-link"
+        >
+          Follow @allthings_bee
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- OTHER COLLECTIONS -->
+
+    <section class="other-collections">
+
+      <div class="coming-head">
+
+        <div class="script-heading">
+          Keep exploring
+        </div>
+
+        <h2 class="section-title">
+          Find the words for every moment.
+        </h2>
+
+      </div>
+
+
+      <div class="other-grid">
+
+        <a href="encouragement.html" class="other-card">
+
+          <h3>Encouragement</h3>
+
+          <p>
+            Gentle reminders for hard days, new beginnings and quiet strength.
+          </p>
+
+          <span class="text-link">Explore →</span>
+
+        </a>
+
+
+        <a href="celebration.html" class="other-card">
+
+          <h3>Celebration & Wins</h3>
+
+          <p>
+            Birthdays, milestones, accomplishments and all the reasons worth celebrating.
+          </p>
+
+          <span class="text-link">Explore →</span>
+
+        </a>
+
+
+        <a href="everyday-moments.html" class="other-card">
+
+          <h3>Everyday Moments</h3>
+
+          <p>
+            Thoughtful words for friendship, gratitude, love and simply thinking of you.
+          </p>
+
+          <span class="text-link">Explore →</span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
 
   <!-- FOOTER -->
 
   <footer>
 
-    <h3>
-      All Things Bee
-    </h3>
+    <div class="footer-inner">
 
-    <p>
-      Encouragement • Inspiration • Meaningful Connection
-    </p>
-  <div class="social-icons">
+      <div class="footer-grid">
 
-  <a href="https://www.instagram.com/allthings_bee/"
-     target="_blank"
-     aria-label="Instagram">
+        <div class="footer-brand">
 
-    <i class="fa-brands fa-instagram"></i>
+          <h3>All Things Bee</h3>
 
-  </a>
+          <div class="tagline">
+            Simple. Elegant. Strong.
+          </div>
 
-</div>
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            for encouragement, inspiration, celebration and the moments
+            in between.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Explore</h4>
+
+          <a href="index.html">Home</a>
+          <a href="encouragement.html">Encouragement</a>
+          <a href="celebration.html">Celebration & Wins</a>
+          <a href="everyday-moments.html">Everyday Moments</a>
+          <a href="evergreen.html">Evergreen</a>
+          <a href="index.html#meet-bee">About Bee</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>Connect</h4>
+
+          <a href="contact.html">Contact Us</a>
+
+          <a
+            href="https://www.instagram.com/allthings_bee/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <div>
+          © 2026 All Things Bee. All rights reserved.
+        </div>
+
+        <div>
+          Encouragement • Inspiration • Celebration
+        </div>
+
+      </div>
+
+    </div>
+
   </footer>
+
+
+  <!-- MOBILE MENU -->
+
+  <script>
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+
+      mainNav.classList.toggle('open');
+
+      if (mainNav.classList.contains('open')) {
+        menuToggle.textContent = '✕';
+      } else {
+        menuToggle.textContent = '☰';
+      }
+
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+
+      link.addEventListener('click', function () {
+
+        mainNav.classList.remove('open');
+        menuToggle.textContent = '☰';
+
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
