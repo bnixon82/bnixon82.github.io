@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Things Bee</title>
-  <link rel="icon" type="image/png" href="Images/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>All Things Bee | Encouragement, Inspiration & Celebration</title>
+
+  <meta
+    name="description"
+    content="All Things Bee creates thoughtfully designed greeting cards and meaningful words for encouragement, inspiration, celebration and everyday moments."
+  >
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Raleway:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
-  <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Raleway:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
   <style>
+    :root {
+      --cream: #E9DFCF;
+      --cream-light: #F8F4ED;
+      --cream-soft: #F3EDE4;
+      --emerald: #31443D;
+      --sage: #5F736C;
+      --gold: #A97C2B;
+      --gold-soft: #B78A34;
+      --charcoal: #2B2B2B;
+      --black: #171717;
+      --white: #FFFFFF;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -20,808 +46,1393 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     html {
       scroll-behavior: smooth;
     }
-    section,
-header {
-  scroll-margin-top: 140px;
-}
 
     body {
       font-family: 'Raleway', sans-serif;
-      background-color: #E9DFCF;
-      color: #31443D;
+      color: var(--charcoal);
+      background: var(--cream-light);
       line-height: 1.7;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
+    img {
       width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 70px;
-      background: rgba(233, 223, 207, 0.82);
-      backdrop-filter: blur(10px);
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input {
+      font-family: inherit;
+    }
+
+    /* HEADER */
+
+    header {
+      position: sticky;
+      top: 0;
       z-index: 1000;
-      border-bottom: 1px solid rgba(95, 115, 108, 0.08);
+      background: rgba(248, 244, 237, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(49, 68, 61, 0.10);
     }
 
-    .logo {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.3rem;
-      color: #B89B5E;
-      letter-spacing: 1px;
-    }
-    .logo {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1;
-}
-
-.logo-main {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.2rem;
-  font-weight: 500;
-  color: #31443D;
-  letter-spacing: 0.5px;
-}
-
-.bee-script {
-  font-family: 'Great Vibes', cursive;
-  font-size: 4.8rem;
-  color: #B89B5E;
-  margin-top: -20px;
-  line-height: 1;
-  text-align: center;
-  width: 100%;
-}
-
-.logo-sub {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 7px;
-  color: #31443D;
-  margin-top: -8px;
-}
-
-    .nav-links {
+    .nav-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 15px 30px;
       display: flex;
-      gap: 42px;
-      list-style: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
-    .nav-links a {
-  position: relative;
-  text-decoration: none;
-  color: #31443D;
-  font-weight: 500;
-  letter-spacing: 1px;
-  padding-bottom: 5px;
-  transition: color 0.3s ease;
-}
-    .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0%;
-  height: 1px;
-  background-color: #B89B5E;
-  transition: width 0.35s ease;
-}
-
-.nav-links a:hover {
-  color: #5F736C;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-.nav-links a:hover {
-  color: #B89B5E;
-}
-    .nav-links a:hover {
-      color: #5F736C;
-    }
-header {
-      background:
-    linear-gradient(rgba(49, 68, 61, 0.72), rgba(49, 68, 61, 0.72)),
-    url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600&auto=format&fit=crop') center/cover;
-
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  padding: 220px 20px 120px;
-
-  color: #F8F3EA;
-}
-
-    .hero-subtitle {
-      margin-top: 40px;
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
-      margin-bottom: 12px;
-      color: #DCC9A3;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
-    .hero-title {
+    .brand img {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
+
+    .brand-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 5.4rem;
-      max-width: 950px;
-      line-height: 1.05;
+      font-size: 1.65rem;
+      font-weight: 600;
       letter-spacing: 1px;
+      color: var(--emerald);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 0.84rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--emerald);
+      position: relative;
+      padding-bottom: 5px;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      color: var(--emerald);
+      font-size: 1.7rem;
+      cursor: pointer;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 84vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(30, 43, 38, 0.82) 0%,
+          rgba(30, 43, 38, 0.64) 42%,
+          rgba(30, 43, 38, 0.15) 100%
+        ),
+        url('https://images.unsplash.com/photo-1510172951991-856a654063f9?auto=format&fit=crop&w=1800&q=85')
+        center/cover no-repeat;
+    }
+
+    .hero-content {
+      width: min(1200px, 100%);
+      margin: 0 auto;
+      padding: 90px 30px;
+    }
+
+    .hero-inner {
+      max-width: 700px;
+      color: var(--white);
+    }
+
+    .eyebrow {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      color: #F2DFB8;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 7vw, 5.8rem);
+      font-weight: 500;
+      line-height: 0.98;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      font-family: 'Great Vibes', cursive;
+      color: #F0D8A7;
+      font-weight: 400;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 35px;
+      color: rgba(255,255,255,0.92);
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 2px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-primary:hover {
+      background: #916923;
+      border-color: #916923;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.75);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background: var(--white);
+      color: var(--emerald);
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: var(--cream);
+      padding: 95px 30px;
+    }
+
+    .intro-inner {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .bee-mark {
+      color: var(--gold);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .script-heading {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-size: 2.2rem;
+      margin-bottom: 2px;
+    }
+
+    .intro h2,
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4.2rem);
+      line-height: 1.05;
+      font-weight: 500;
+      color: var(--emerald);
+      margin-bottom: 22px;
+    }
+
+    .intro p {
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      line-height: 1.7;
+      color: #4D574F;
+    }
+
+    /* COLLECTIONS */
+
+    .collections {
+      padding: 105px 30px;
+      background: var(--cream-light);
+    }
+
+    .section-head {
+      max-width: 1200px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-head p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: #667069;
+    }
+
+    .collection-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .collection-card {
+      min-height: 470px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .collection-card img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+      z-index: -2;
+    }
+
+    .collection-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(20, 31, 27, 0.88),
+        rgba(20, 31, 27, 0.10) 65%
+      );
+      z-index: -1;
+    }
+
+    .collection-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .collection-info {
+      position: absolute;
+      left: 28px;
+      right: 28px;
+      bottom: 30px;
+      color: var(--white);
+    }
+
+    .collection-info span {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #F1D7A5;
+      margin-bottom: 6px;
+    }
+
+    .collection-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .collection-info p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      margin-bottom: 13px;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .collection-link {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    /* FEATURED CARD */
+
+    .featured {
+      background: var(--emerald);
+      padding: 100px 30px;
+    }
+
+    .featured-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .featured-image {
+      position: relative;
+    }
+
+    .featured-image img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .featured-image::before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: -18px;
+      right: 18px;
+      bottom: 18px;
+      border: 1px solid rgba(233,223,207,0.34);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .featured-copy {
+      color: var(--white);
+    }
+
+    .featured-copy .script-heading {
+      color: #DFBE80;
+    }
+
+    .featured-copy h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      line-height: 1;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .featured-copy p {
+      color: rgba(255,255,255,0.84);
+      line-height: 1.9;
+      margin-bottom: 17px;
+    }
+
+    .featured-quote {
+      border-left: 2px solid var(--gold-soft);
+      padding-left: 22px;
+      margin: 28px 0 32px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-style: italic;
+      color: var(--cream);
+    }
+
+    /* SWEET REMINDER */
+
+    .sweet-reminder {
+      padding: 110px 30px;
+      text-align: center;
+      background: var(--cream-soft);
+    }
+
+    .sweet-reminder-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .sweet-reminder h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(3rem, 7vw, 5.2rem);
+      color: var(--gold);
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+
+    .reminder-quote {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--emerald);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.25;
       margin-bottom: 28px;
     }
 
-    .hero-text {
-      max-width: 720px;
-      font-size: 1.15rem;
-      margin-bottom: 45px;
-      color: #F4EEE4;
+    .sweet-reminder p {
+      color: #667069;
+      margin-bottom: 28px;
     }
 
-    .hero-button {
-      background-color: #5F736C;
-      color: #F8F3EA;
-      padding: 16px 38px;
-      border-radius: 50px;
-      text-decoration: none;
+    .green-link {
+      display: inline-block;
+      color: var(--emerald);
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 3px;
       font-weight: 600;
-      letter-spacing: 1px;
-      transition: 0.3s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
-    .hero-button:hover {
-      background-color: #4D615B;
-      transform: translateY(-3px);
+    /* MEET BEE */
+
+    .meet-bee {
+      padding: 110px 30px;
+      background: var(--white);
     }
 
-    section {
-      padding: 110px 12%;
+    .meet-grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 70px;
+      align-items: center;
     }
 
-    .section-title {
+    .meet-photo img {
+      height: 640px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .meet-copy .small-title {
+      color: var(--gold);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .meet-copy h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.3rem;
-      margin-bottom: 20px;
-      text-align: center;
-      color: #31443D;
+      color: var(--emerald);
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      line-height: 1;
+      font-weight: 500;
+      margin-bottom: 26px;
     }
 
-    .section-text {
-      max-width: 860px;
+    .meet-copy p {
+      color: #5E665F;
+      margin-bottom: 17px;
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      color: var(--gold);
+      font-size: 2.5rem;
+      margin: 30px 0 22px;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter {
+      padding: 90px 30px;
+      background:
+        linear-gradient(rgba(49,68,61,0.93), rgba(49,68,61,0.93)),
+        url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80')
+        center/cover;
+    }
+
+    .newsletter-inner {
+      max-width: 760px;
       margin: 0 auto;
       text-align: center;
-      font-size: 1.1rem;
-      color: #556861;
+      color: var(--white);
     }
 
-.collections {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
-  gap: 28px;
-  margin-top: 65px;
-  align-items: stretch;
-}
-
-.card {
-  background-color: #F8F3EA;
-  border-radius: 28px;
-  padding: 42px 30px;
-  min-height: 330px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-
-  box-shadow: 0 12px 35px rgba(49, 68, 61, 0.08);
-  border: 1px solid rgba(95, 115, 108, 0.08);
-  transition: 0.3s ease;
-}
-    .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 18px 45px rgba(49, 68, 61, 0.12);
-  border-color: rgba(184, 155, 94, 0.22);
-}
-
-.card:hover .card-accent {
-  width: 75px;
-}
-
-  .card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  line-height: 1.15;
-  margin-bottom: 28px;
-  color: #31443D;
-  min-height: 74px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card p {
-  color: #5C6E67;
-  font-size: 0.98rem;
-  line-height: 1.65;
-  max-width: 235px;
-  margin: 0 auto;
-}
-
-   .about-section {
-
-  background-image:
-    linear-gradient(
-      rgba(47, 74, 67, 0.84),
-      rgba(47, 74, 67, 0.84)
-    ),
-    url('Images/IMG_2579.jpg');
-
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  color: #F8F3EA;
-
-}
- 
-  @media (max-width: 768px) {
-
-  .about-section {
-    background-position: center 15%;
-    background-size: 115%;
-  }
-
-}
-    @media (min-width: 769px) {
-
-  .about-section {
-    background-attachment: fixed;
-    background-size: 110%;
-  }
-
-}
-   
-
- @media (max-width: 768px) {
-
-  .logo-main {
-    font-size: 2.5rem;
-  }
-
-  .bee-script {
-    font-size: 3rem;
-    margin-top: -14px;
-    
-  }
-@media (max-width: 768px) {
-
-  .collections {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: auto;
-    padding: 45px 30px;
-  }
-
-  .card h3 {
-    min-height: auto;
-  }
-
-}
-  .logo-sub {
-    font-size: 0.6rem;
-    letter-spacing: 4px;
-  }
-
-}
-  @media (max-width: 768px) {
-
-  .card {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 30px rgba(49, 68, 61, 0.10);
-  }
-
-  .card-accent {
-    width: 70px;
-  }
-
-}
-
-.card {
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-.card:active {
-  transform: scale(0.98);
-}
-    .card {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-    .about-content {
-      max-width: 900px;
-      margin: auto;
-      text-align: center;
+    .newsletter .script-heading {
+      color: #DFBE80;
     }
 
-    .about-content h2 {
+    .newsletter h2 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 3.4rem;
-      margin-bottom: 25px;
-      color: #F8F3EA;
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 16px;
     }
 
-    .about-content p {
-      margin-bottom: 22px;
-      font-size: 1.1rem;
-      color: #E9DFCF;
+    .newsletter > .newsletter-inner > p {
+      max-width: 610px;
+      margin: 0 auto 28px;
+      color: rgba(255,255,255,0.82);
     }
-    
-    .about-content h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 5rem;
-  color: #DCC9A3;
-  margin-bottom: 30px;
-  line-height: 1.1;
-  letter-spacing: 1px;
-}
-    .about-heading {
-  line-height: 1.1;
-}
 
-.about-intro {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  color: #F8F3EA;
-  display: block;
-}
+    .signup-form {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      background: var(--white);
+      padding: 5px;
+    }
 
-.about-name {
-  font-family: 'Great Vibes', cursive;
-  font-size: 4.8rem;
-  color: #DCC9A3;
-  display: block;
-  margin-top: 8px;
-}
-    .contact-section {
-  background: #F6F1E7;
-  padding: 140px 20px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
+    .signup-form input {
+      flex: 1;
+      border: none;
+      padding: 16px;
+      outline: none;
+      font-size: 0.92rem;
+      min-width: 0;
+    }
 
-.contact-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
+    .signup-form input:first-of-type {
+      max-width: 190px;
+      border-right: 1px solid #E7E1D7;
+    }
 
-.contact-bee {
-  width: 90px;
-  margin-bottom: 30px;
-}
+    .signup-form button {
+      border: none;
+      background: var(--gold);
+      color: var(--white);
+      padding: 16px 23px;
+      cursor: pointer;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+    }
 
-.contact-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 5.8rem;
-  font-weight: 500;
-  color: #31443D;
-  line-height: 1;
-  margin-bottom: 0;
-}
+    .privacy-note {
+      font-size: 0.72rem;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.68);
+      max-width: 600px;
+      margin: 14px auto 0;
+    }
 
-.contact-script {
-  font-family: 'Great Vibes', cursive;
-  font-size: 5rem;
-  font-weight: 400;
-  color: #B89B5E;
-  margin-top: -10px;
-  margin-bottom: 35px;
-}
+    .privacy-note a {
+      text-decoration: underline;
+      color: rgba(255,255,255,0.90);
+    }
 
-.contact-divider {
-  width: 260px;
-  height: 1px;
-  background: #C8A96B;
-  margin: 0 auto 40px auto;
-  position: relative;
-}
-
-.contact-divider::after {
-  content: "✦";
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #F6F1E7;
-  color: #C8A96B;
-  padding: 0 10px;
-  font-size: 1rem;
-}
-    .success-message {
-  margin-top: 24px;
-  font-size: 0.95rem;
-  letter-spacing: 1px;
-  color: #7A8C84;
-  opacity: 0;
-  transition: opacity 0.10s ease;
-}
-
-.section-text {
-  max-width: 620px;
-  margin: 0 auto 40px auto;
-  font-size: 1.1rem;
-  line-height: 1.9;
-  color: #5F736C;
-}
-
-.email-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.email-box input {
-  padding: 16px 18px;
-  width: 320px;
-  border: 1px solid #D8C7A0;
-  background: #FCFAF6;
-  font-size: 1rem;
-  font-family: 'Raleway', sans-serif;
-  outline: none;
-}
-
-.email-box button {
-  padding: 16px 30px;
-  border: 1px solid #B89B5E;
-  background: transparent;
-  color: #31443D;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  transition: all 0.35s ease;
-}
-
-.email-box button:hover {
-  background: #B89B5E;
-  color: #F8F3EA;
-}
+    /* FOOTER */
 
     footer {
-      background-color: #31443D;
-      color: #F8F3EA;
-      text-align: center;
-      padding: 50px 20px;
+      background: #25332E;
+      color: rgba(255,255,255,0.78);
+      padding: 70px 30px 28px;
     }
 
-    footer h3 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 2.3rem;
-      color: #B89B5E;
-      margin-bottom: 12px;
+    .footer-inner {
+      max-width: 1150px;
+      margin: 0 auto;
     }
 
-    footer p {
-      letter-spacing: 1px;
-      color: #E9DFCF;
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.13);
     }
-    .social-icons {
-  margin-top: 22px;
-}
 
-.social-icons a {
-  color: #DCC9A3;
-  font-size: 1.8rem;
-  transition: 0.3s ease;
-}
+    .footer-brand h3 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
 
-.social-icons a:hover {
-  color: #F8F3EA;
-  transform: translateY(-3px) scale(1.08);
-}
-.card-accent {
-  width: 48px;
-  height: 2px;
-  background: #C8A96B;
-  margin-bottom: 24px;
-  transition: 0.35s ease;
-}
-    @media(max-width: 768px) {
-      nav {
-        padding: 20px;
-        flex-direction: column;
-        gap: 15px;
+    .footer-brand .tagline {
+      color: #D8B979;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 17px;
+    }
+
+    .footer-brand p {
+      max-width: 380px;
+      font-size: 0.86rem;
+      line-height: 1.8;
+    }
+
+    .footer-column h4 {
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      margin-bottom: 14px;
+      font-weight: 500;
+    }
+
+    .footer-column a {
+      display: block;
+      margin-bottom: 9px;
+      font-size: 0.82rem;
+      transition: color 0.2s ease;
+    }
+
+    .footer-column a:hover {
+      color: #D8B979;
+    }
+
+    .copyright {
+      padding-top: 26px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.52);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+
+      .menu-toggle {
+        display: block;
       }
 
-      .hero-title {
+      nav {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        display: none;
+        background: var(--cream-light);
+        border-top: 1px solid rgba(49,68,61,0.10);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        padding: 30px;
+        gap: 22px;
+      }
+
+      .collection-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .collection-card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .featured-grid,
+      .meet-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .meet-photo img {
+        height: auto;
+        max-height: 650px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav-wrap {
+        padding: 12px 20px;
+      }
+
+      .brand-name {
+        font-size: 1.35rem;
+      }
+
+      .brand img {
+        width: 44px;
+        height: 44px;
+      }
+
+      .hero {
+        min-height: 77vh;
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        padding: 75px 22px;
+      }
+
+      .hero h1 {
         font-size: 3.3rem;
       }
 
-      .hero-text {
-        font-size: 1rem;
+      .hero p {
+        font-size: 0.94rem;
       }
 
-      section {
-        padding: 85px 8%;
+      .button-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .intro,
+      .collections,
+      .featured,
+      .sweet-reminder,
+      .meet-bee,
+      .newsletter {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .collection-card:last-child {
+        grid-column: auto;
+      }
+
+      .collection-card {
+        min-height: 430px;
+      }
+
+      .featured-image::before {
+        top: -10px;
+        left: -10px;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .signup-form {
+        flex-direction: column;
+        background: transparent;
+        gap: 10px;
+        padding: 0;
+      }
+
+      .signup-form input,
+      .signup-form input:first-of-type {
+        width: 100%;
+        max-width: none;
+        border-right: none;
+      }
+
+      .signup-form button {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .copyright {
+        flex-direction: column;
       }
     }
-    @media (max-width: 768px) {
-
-  .about-content h2 {
-    font-size: 3.8rem;
-      }
-    }
-      @media (max-width: 768px) {
-
-  .contact-section {
-    padding: 100px 24px;
-  }
-
-  .contact-heading {
-    font-size: 3.4rem;
-  }
-
-  .contact-script {
-    font-size: 3.2rem;
-    margin-top: 8px;
-  }
-
-  .contact-bee {
-    width: 65px;
-  }
-
-  .contact-divider {
-    width: 180px;
-  }
-
-  .email-box {
-    flex-direction: column;
-  }
-
-  .email-box input {
-    width: 100%;
-  }
-
-  .email-box button {
-    width: 100%;
-  }
-
-}
-
-
   </style>
 </head>
+
 <body>
 
-  <nav>
-   <a href="index.html" class="logo" aria-label="All Things Bee Home">
+  <!-- HEADER -->
 
-  <div class="logo-main">
-    All Things
-  </div>
+  <header>
+    <div class="nav-wrap">
 
-  <div class="bee-script">
-    Bee
-  </div>
+      <a href="index.html" class="brand">
+        <img src="images/bee-logo.png" alt="All Things Bee logo">
+        <span class="brand-name">All Things Bee</span>
+      </a>
 
-  <div class="logo-sub">
-    GREETING CARDS
-  </div>
-
-</a>
-
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#collections">Collections</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <header id="home">
-    <div class="hero-subtitle">Thoughtfully Designed With Heart</div>
-
-    <h1 class="hero-title">
-      Meaningful Words Designed To Encourage, Celebrate & Stay With You.
-    </h1>
-
-    <p class="hero-text">
-      All Things Bee is a greeting card brand rooted in encouragement,
-      meaningful connection, and moments worth holding onto.
-    </p>
-
-    <a href="#collections" class="hero-button">Explore The Brand</a>
-  </header>
-
-  <section id="collections">
-    <h2 class="section-title">The Collections</h2>
-
-    <p class="section-text">
-      Thoughtfully designed greeting cards created to celebrate growth,
-      offer encouragement, and honor life’s meaningful moments.
-    </p>
-
-    <div class="collections">
-      <div class="card">
-        <div class="card-accent"></div>
-        <a href="encouragement.html" class="card">
-
-  <h3>Encouragement</h3>
-
-  <p>
-    Gentle reminders and meaningful words for the seasons when people need them most.
-  </p>
-
-</a>
-      </div>
-
-      <div class="card">
-        <div class="card-accent"></div>
-        <a href="celebration.html" class="card">
-
-  <h3>Celebration</h3>
-
-  <p>
-    Elevated cards designed to honor milestones, accomplishments, and new beginnings.
-  </p>
-
-</a>
-      </div>
-
-      <div class="card">
-        <div class="card-accent"></div>
-        <a href="everyday-moments.html" class="card">
-        <h3>Everyday Moments</h3>
-        <p>
-          Keepsake-worthy cards created for intentional moments, thoughtful gestures, and everyday connections worth holding onto.
-        </p>
-        </a>
-      </div>
-
-      <div class="card">
-        <div class="card-accent"></div>
-        <a href="evergreen.html" class="card">
-        <h3>Evergreen Collection</h3>
-        <p>
-          Thoughtfully designed seasonal cards created to celebrate traditions, meaningful holidays, and moments shared year after year.
-        </p>
-        </a>
-      </div>
-     </div>
-</section>
-  
-<section id="about" class="about-section">
-
-  <div class="about-content">
-
-    <h2>
-      Hi, I'm Bisceglia
-    </h2>
-
-    <p>
-      All Things Bee was created from a love for meaningful words,
-      encouragement, and the simple beauty of helping people feel seen.
-    </p>
-
-    <p>
-      What began as a creative dream has slowly grown into a thoughtfully
-      designed greeting card brand rooted in intentional connection,
-      heartfelt celebration, and keepsake-worthy moments.
-    </p>
-
-    <p>
-      Every collection is designed with warmth, elegance, and emotional
-      storytelling in mind — creating cards that people not only give,
-      but hold onto.
-    </p>
-  </div>
-</section>
-  
-<section id="contact" class="contact-section">
-  <div class="contact-content">
-    <img src="Images/bee-logo.png"
-         alt="All Things Bee"
-         class="contact-bee">
-
-    <h2 class="contact-heading">
-      Something Beautiful
-    </h2>
-
-    <h3 class="contact-script">
-      Is On The Way
-    </h3>
-
-    <div class="contact-divider"></div>
-
-    <p class="section-text">
-      Join the mailing list for launch updates, collection announcements,
-      and behind-the-scenes moments from All Things Bee.
-    </p>
-
-<form class="email-box"
-  action="https://docs.google.com/forms/d/e/1FAIpQLSe37ci3eKWidQo-fH-7B1wqCGttCDf6jk_2EU68XllL9B5ikA/formResponse"
-  method="POST"
-  target="_blank"
-  onsubmit="showSuccessMessage(); setTimeout(() => this.reset(), 100);">
-
-      <input
-        type="email"
-        name="entry.52549828"
-        placeholder="Enter your email"
-        required
-      />
-
-      <button type="submit">
-        Join The List
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ☰
       </button>
 
-    </form>
-      <p class="success-message">
-  Thanks for joining the hive. 🐝 
-</p>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#meet-bee">About Bee</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/allthings_bee/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-  </div>
+    </div>
+  </header>
 
-</section>
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-content">
+        <div class="hero-inner">
+
+          <div class="eyebrow">
+            Encouragement • Inspiration • Celebration
+          </div>
+
+          <h1>
+            Words have a way of
+            <span>staying with us.</span>
+          </h1>
+
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            created to encourage, celebrate and remind the people we love
+            that they are seen.
+          </p>
+
+          <div class="button-group">
+            <a href="#collections" class="btn btn-primary">
+              Explore the Collections
+            </a>
+
+            <a href="#meet-bee" class="btn btn-outline">
+              Meet Bee
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
 
 
-<div style="height: 24px;"></div>
- 
-    <footer>
-  <h3>All Things Bee</h3>
+    <!-- INTRO -->
 
-  <p>
-    Encouragement • Inspiration • Celebration
-  </p>
+    <section class="intro">
 
-  <div class="social-icons">
-    <a href="https://www.instagram.com/allthings_bee/"
-       target="_blank"
-       aria-label="Instagram">
+      <div class="intro-inner">
 
-      <i class="fa-brands fa-instagram"></i>
+        <div class="bee-mark">🐝</div>
 
-    </a>
-  </div>
+        <div class="script-heading">
+          More than a card
+        </div>
 
-</footer>
-<script>
+        <h2>
+          A little something that feels like a hug.
+        </h2>
 
-function showSuccessMessage() {
+        <p>
+          All Things Bee was created for the moments when the right words
+          matter — when someone needs encouragement, when life deserves
+          celebrating, or when you simply want to say,
+          “I’m thinking of you.”
+        </p>
 
-  const message = document.querySelector('.success-message');
+      </div>
 
-  message.style.opacity = '1';
+    </section>
 
-  setTimeout(() => {
-    message.style.opacity = '0';
-  }, 4000);
 
-}
+    <!-- COLLECTIONS -->
 
-</script>
+    <section class="collections" id="collections">
+
+      <div class="section-head">
+
+        <div class="script-heading">
+          Find the words
+        </div>
+
+        <h2 class="section-heading">
+          Explore the Collections
+        </h2>
+
+        <p>
+          Thoughtful words for life's victories, quiet moments,
+          fresh starts and everything in between.
+        </p>
+
+      </div>
+
+
+      <div class="collection-grid">
+
+        <!-- ENCOURAGEMENT -->
+
+        <a href="encouragement.html" class="collection-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85"
+            alt="Warm peaceful stationery setting"
+          >
+
+          <div class="collection-info">
+
+            <span>The Flagship Collection</span>
+
+            <h3>Encouragement</h3>
+
+            <p>
+              Gentle reminders for hard days, brave beginnings and
+              the moments when someone needs to hear: keep going.
+            </p>
+
+            <div class="collection-link">
+              Explore Encouragement →
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <!-- CELEBRATION -->
+
+        <a href="celebration.html" class="collection-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=85"
+            alt="Elegant celebration setting"
+          >
+
+          <div class="collection-info">
+
+            <span>Celebrate the Moment</span>
+
+            <h3>Celebration & Wins</h3>
+
+            <p>
+              Birthdays, milestones, accomplishments and all the
+              beautiful reasons worth celebrating.
+            </p>
+
+            <div class="collection-link">
+              Explore Celebration →
+            </div>
+
+          </div>
+
+        </a>
+
+
+        <!-- EVERYDAY MOMENTS -->
+
+        <a href="everyday.html" class="collection-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1490730141103-6cac27aaab94?auto=format&fit=crop&w=900&q=85"
+            alt="Peaceful meaningful everyday moment"
+          >
+
+          <div class="collection-info">
+
+            <span>Just Because</span>
+
+            <h3>Everyday Moments</h3>
+
+            <p>
+              Meaningful words for friendship, gratitude, love
+              and those everyday moments that deserve remembering.
+            </p>
+
+            <div class="collection-link">
+              Explore Everyday Moments →
+            </div>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED CARD -->
+
+    <section class="featured">
+
+      <div class="featured-grid">
+
+        <div class="featured-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=85"
+            alt="Keep Going encouragement card feature"
+          >
+
+        </div>
+
+
+        <div class="featured-copy">
+
+          <div class="script-heading">
+            From the hive
+          </div>
+
+          <h2>
+            Keep Going.
+          </h2>
+
+          <p>
+            The first card from All Things Bee began with one simple
+            reminder: progress does not always have to be loud to matter.
+          </p>
+
+          <p>
+            Created with intention, <em>Keep Going</em> is for the person
+            navigating change, becoming something new, or simply needing
+            someone to remind them that they have already come so far.
+          </p>
+
+          <div class="featured-quote">
+            “There is still more ahead of you than behind you.”
+          </div>
+
+          <a href="encouragement.html" class="btn btn-primary">
+            Explore Encouragement
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SWEET REMINDER -->
+
+    <section class="sweet-reminder">
+
+      <div class="sweet-reminder-inner">
+
+        <div class="bee-mark">🐝</div>
+
+        <h2>
+          A Sweet Reminder
+        </h2>
+
+        <div class="reminder-quote">
+          You do not have to have everything figured out
+          to keep moving forward.
+        </div>
+
+        <p>
+          A little encouragement for your Sunday — and for
+          whatever this next week holds.
+        </p>
+
+        <a
+          href="https://www.instagram.com/allthings_bee/"
+          target="_blank"
+          rel="noopener"
+          class="green-link"
+        >
+          Follow Sweet Reminder Sunday @allthings_bee
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- MEET BEE -->
+
+    <section class="meet-bee" id="meet-bee">
+
+      <div class="meet-grid">
+
+        <div class="meet-photo">
+
+          <img
+            src="images/IMG_2579.jpg"
+            alt="Bee, founder of All Things Bee"
+          >
+
+        </div>
+
+
+        <div class="meet-copy">
+
+          <div class="small-title">
+            The heart behind the brand
+          </div>
+
+          <h2>
+            Hi, I’m Bee.
+          </h2>
+
+          <p>
+            I created All Things Bee from a love of meaningful words
+            and the belief that encouragement can arrive at exactly
+            the moment someone needs it.
+          </p>
+
+          <p>
+            I wanted to create greeting cards that feel personal,
+            intentional and warm — cards that reflect us, celebrate us
+            and remind us of our strength.
+          </p>
+
+          <p>
+            Whether someone is celebrating a milestone, navigating
+            something difficult or simply needs to know that they are
+            loved, I hope every All Things Bee card feels like a small
+            hug they can hold onto.
+          </p>
+
+          <div class="signature">
+            With love, Bee
+          </div>
+
+          <a href="about.html" class="green-link">
+            Read My Story →
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="newsletter">
+
+      <div class="newsletter-inner">
+
+        <div class="script-heading">
+          Something sweet for your inbox
+        </div>
+
+        <h2>
+          Stay close to the hive.
+        </h2>
+
+        <p>
+          Join the All Things Bee community for new card releases,
+          encouraging words, Sweet Reminders and a little beauty
+          delivered straight to your inbox.
+        </p>
+
+
+        <!--
+          Replace YOUR-FORMSPREE-LINK with your actual
+          Formspree newsletter endpoint.
+        -->
+
+        <form
+          class="signup-form"
+          action="YOUR-FORMSPREE-LINK"
+          method="POST"
+        >
+
+          <input
+            type="text"
+            name="first_name"
+            placeholder="First name"
+            aria-label="First name"
+            required
+          >
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Email address"
+            aria-label="Email address"
+            required
+          >
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New All Things Bee Newsletter Signup"
+          >
+
+          <button type="submit">
+            Join the Hive
+          </button>
+
+        </form>
+
+
+        <div class="privacy-note">
+          By subscribing, you agree to receive occasional emails from
+          All Things Bee, including encouraging words, product updates
+          and new releases. You may unsubscribe at any time.
+          View our
+          <a href="privacy.html">Privacy Policy</a>.
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <h3>
+            All Things Bee
+          </h3>
+
+          <div class="tagline">
+            Simple. Elegant. Strong.
+          </div>
+
+          <p>
+            Thoughtfully designed greeting cards and meaningful words
+            for encouragement, inspiration, celebration and the
+            moments in between.
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Explore
+          </h4>
+
+          <a href="index.html">Home</a>
+          <a href="encouragement.html">Encouragement</a>
+          <a href="celebration.html">Celebration & Wins</a>
+          <a href="everyday.html">Everyday Moments</a>
+          <a href="about.html">About Bee</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+            Connect
+          </h4>
+
+          <a href="contact.html">Contact Us</a>
+
+          <a
+            href="https://www.instagram.com/allthings_bee/"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+
+          <a href="privacy.html">
+            Privacy Policy
+          </a>
+
+          <a href="terms.html">
+            Terms & Conditions
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        <div>
+          © 2026 All Things Bee. All rights reserved.
+        </div>
+
+        <div>
+          Encouragement • Inspiration • Celebration
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- MOBILE MENU -->
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', function () {
+
+      mainNav.classList.toggle('open');
+
+      if (mainNav.classList.contains('open')) {
+        menuToggle.textContent = '✕';
+      } else {
+        menuToggle.textContent = '☰';
+      }
+
+    });
+
+    document.querySelectorAll('#mainNav a').forEach(link => {
+
+      link.addEventListener('click', function () {
+
+        mainNav.classList.remove('open');
+        menuToggle.textContent = '☰';
+
+      });
+
+    });
+  </script>
+
 </body>
 </html>
